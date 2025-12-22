@@ -1,0 +1,204 @@
+{
+  "generated_at": "2025-12-04T18:55:05.156557",
+  "protocol_version": "1.0",
+  "primary_analysis": {
+    "comparison": "drift_aware_full_stack vs baseline_static",
+    "n_pairs": 756,
+    "baseline_mean": 0.0003414742190977306,
+    "baseline_std": 0.0003842904806610039,
+    "treatment_mean": 0.0001316364579505967,
+    "treatment_std": 6.311950627676997e-05,
+    "mean_difference": -0.00020983776114713397,
+    "bootstrap_ci": {
+      "lower": -0.00023393365007172017,
+      "upper": -0.00018552810206194686,
+      "confidence_level": 0.95,
+      "method": "paired_bootstrap_difference"
+    },
+    "cohens_d": {
+      "value": 0.62469878201929,
+      "metric": "cohens_d",
+      "ci": null,
+      "interpretation": "medium"
+    },
+    "relative_risk_reduction": {
+      "value": 0.6145054279693013,
+      "metric": "relative_risk_reduction",
+      "ci": null,
+      "interpretation": "61.5% reduction"
+    },
+    "paired_t_test": {
+      "test_name": "paired_t_test",
+      "statistic": -17.176376730900685,
+      "p_value": 4.557120629097755e-56,
+      "df": 755,
+      "effect_size": {
+        "value": 0.62469878201929,
+        "metric": "cohens_d",
+        "ci": null,
+        "interpretation": "medium"
+      },
+      "ci": {
+        "lower": -0.00023382039895416949,
+        "upper": -0.00018585512334009846,
+        "confidence_level": 0.95,
+        "method": "t_distribution"
+      },
+      "alternative": "two-sided",
+      "n": 756,
+      "conclusion": null
+    },
+    "wilcoxon_test": {
+      "test_name": "wilcoxon_signed_rank",
+      "statistic": 0.0,
+      "p_value": 6.628221790169507e-53,
+      "df": null,
+      "effect_size": null,
+      "ci": null,
+      "alternative": "two-sided",
+      "n": 756,
+      "conclusion": null
+    }
+  },
+  "secondary_analyses": [
+    {
+      "test_name": "paired_t_test",
+      "statistic": -33.73176262116196,
+      "p_value": 3.170289526054257e-95,
+      "df": 251,
+      "effect_size": {
+        "value": 2.1249013137966384,
+        "metric": "cohens_d",
+        "ci": null,
+        "interpretation": "large"
+      },
+      "ci": {
+        "lower": -0.0006563424883432931,
+        "upper": -0.0005839281381839865,
+        "confidence_level": 0.95,
+        "method": "t_distribution"
+      },
+      "alternative": "two-sided",
+      "n": 252,
+      "conclusion": "Distance 3 subgroup",
+      "adjusted_p_value": 9.510868578162772e-95,
+      "significant_after_correction": true
+    },
+    {
+      "test_name": "paired_t_test",
+      "statistic": -5.829791089008391,
+      "p_value": 1.698912459217032e-08,
+      "df": 251,
+      "effect_size": {
+        "value": 0.36724231945182423,
+        "metric": "cohens_d",
+        "ci": null,
+        "interpretation": "small"
+      },
+      "ci": {
+        "lower": -1.2546100732563082e-05,
+        "upper": -6.2098396229612615e-06,
+        "confidence_level": 0.95,
+        "method": "t_distribution"
+      },
+      "alternative": "two-sided",
+      "n": 252,
+      "conclusion": "Distance 5 subgroup",
+      "adjusted_p_value": 3.397824918434064e-08,
+      "significant_after_correction": true
+    },
+    {
+      "test_name": "paired_t_test",
+      "statistic": NaN,
+      "p_value": NaN,
+      "df": 251,
+      "effect_size": {
+        "value": NaN,
+        "metric": "cohens_d",
+        "ci": null,
+        "interpretation": "large"
+      },
+      "ci": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "confidence_level": 0.95,
+        "method": "t_distribution"
+      },
+      "alternative": "two-sided",
+      "n": 252,
+      "conclusion": "Distance 7 subgroup",
+      "adjusted_p_value": NaN,
+      "significant_after_correction": false
+    }
+  ],
+  "effect_sizes": [
+    {
+      "value": 0.62469878201929,
+      "metric": "cohens_d",
+      "ci": null,
+      "interpretation": "medium"
+    },
+    {
+      "value": 0.6145054279693013,
+      "metric": "relative_risk_reduction",
+      "ci": null,
+      "interpretation": "61.5% reduction"
+    }
+  ],
+  "sample_sizes": {
+    "total_observations": 1512,
+    "by_strategy": {
+      "baseline_static": 756,
+      "drift_aware_full_stack": 756
+    },
+    "by_backend": {
+      "ibm_brisbane": 504,
+      "ibm_kyoto": 504,
+      "ibm_osaka": 504
+    },
+    "by_distance": {
+      "3": 504,
+      "5": 504,
+      "7": 504
+    }
+  },
+  "assumptions_checks": [
+    {
+      "test": "Shapiro-Wilk",
+      "statistic": 0.6865568991923948,
+      "p_value": 3.643598098572789e-35,
+      "n": 756,
+      "assumption_met": "False",
+      "interpretation": "Normality assumption may be violated",
+      "group": "baseline_static"
+    },
+    {
+      "test": "Shapiro-Wilk",
+      "statistic": 0.5798453667489096,
+      "p_value": 3.881066810951255e-39,
+      "n": 756,
+      "assumption_met": "False",
+      "interpretation": "Normality assumption may be violated",
+      "group": "drift_aware_full_stack"
+    }
+  ],
+  "multiple_comparisons": {
+    "original_p_values": [
+      3.170289526054257e-95,
+      1.698912459217032e-08,
+      NaN
+    ],
+    "adjusted_p_values": [
+      9.510868578162772e-95,
+      3.397824918434064e-08,
+      NaN
+    ],
+    "rejected": [
+      true,
+      true,
+      false
+    ],
+    "alpha": 0.05,
+    "method": "holm_bonferroni"
+  }
+}

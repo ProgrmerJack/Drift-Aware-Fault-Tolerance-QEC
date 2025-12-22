@@ -1,0 +1,58 @@
+{
+  "task_name": "repetition_code_baseline",
+  "timestamp": "2025-12-04T17:18:12.282664+00:00",
+  "backend": "ibm_fez",
+  "execution_time_seconds": 21.40142846107483,
+  "success": true,
+  "data": {
+    "strategy": "baseline_calibration_only",
+    "distance": 3,
+    "data_qubits": [
+      3,
+      1,
+      5,
+      28,
+      15
+    ],
+    "ancilla_qubits": [
+      135,
+      142
+    ],
+    "results": [
+      {
+        "initial_state": "0",
+        "rounds": 1,
+        "distance": 3,
+        "n_errors": 0,
+        "n_total": 1000,
+        "error_rate": 0.0
+      },
+      {
+        "initial_state": "0",
+        "rounds": 2,
+        "distance": 3,
+        "n_errors": 0,
+        "n_total": 1000,
+        "error_rate": 0.0
+      },
+      {
+        "initial_state": "1",
+        "rounds": 1,
+        "distance": 3,
+        "n_errors": 0,
+        "n_total": 1000,
+        "error_rate": 0.0
+      },
+      {
+        "initial_state": "1",
+        "rounds": 2,
+        "distance": 3,
+        "n_errors": 4,
+        "n_total": 1000,
+        "error_rate": 0.004
+      }
+    ],
+    "mean_logical_error_rate": 0.001
+  },
+  "error": null
+}

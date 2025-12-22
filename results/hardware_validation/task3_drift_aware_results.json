@@ -1,0 +1,144 @@
+{
+  "task_name": "repetition_code_drift_aware",
+  "timestamp": "2025-12-04T17:20:28.380237+00:00",
+  "backend": "ibm_fez",
+  "execution_time_seconds": 124.9357533454895,
+  "success": true,
+  "data": {
+    "strategy": "drift_aware_probe_refreshed",
+    "distance": 3,
+    "data_qubits": [
+      3,
+      1,
+      5,
+      28,
+      15
+    ],
+    "ancilla_qubits": [
+      135,
+      142
+    ],
+    "probe_data": {
+      "0": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "2": {
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "4": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.09999999999999998,
+        "ro_err": 0.04999999999999999
+      },
+      "6": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "8": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.033333333333333326,
+        "ro_err": 0.016666666666666663
+      },
+      "10": {
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "12": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "14": {
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "16": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "18": {
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.033333333333333326,
+        "ro_err": 0.016666666666666663
+      },
+      "20": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "22": {
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "24": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "26": {
+        "t1": 20.0,
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      },
+      "28": {
+        "ro_err_0": 0.0,
+        "ro_err_1": 0.0,
+        "ro_err": 0.0
+      }
+    },
+    "results": [
+      {
+        "initial_state": "0",
+        "rounds": 1,
+        "distance": 3,
+        "n_errors": 0,
+        "n_total": 1000,
+        "error_rate": 0.0
+      },
+      {
+        "initial_state": "0",
+        "rounds": 2,
+        "distance": 3,
+        "n_errors": 0,
+        "n_total": 1000,
+        "error_rate": 0.0
+      },
+      {
+        "initial_state": "1",
+        "rounds": 1,
+        "distance": 3,
+        "n_errors": 1,
+        "n_total": 1000,
+        "error_rate": 0.001
+      },
+      {
+        "initial_state": "1",
+        "rounds": 2,
+        "distance": 3,
+        "n_errors": 3,
+        "n_total": 1000,
+        "error_rate": 0.003
+      }
+    ],
+    "mean_logical_error_rate": 0.001
+  },
+  "error": null
+}

@@ -1,0 +1,175 @@
+# ============================================================================
+# Experiment Configuration
+# ============================================================================
+# Defines the experimental protocol for drift-aware QEC experiments.
+# This file is referenced by protocol/protocol.yaml for reproducibility.
+#
+# CRITICAL: Do not modify parameters after data collection begins.
+# Any changes require protocol amendment (see protocol/amendments.md).
+# ============================================================================
+
+# Experiment Record Schema
+# Each experimental run produces a record with these fields
+record_schema:
+  required_fields:
+    - experiment_id                      # UUID for this run
+    - backend_name                       # IBM backend used
+    - timestamp_start                    # ISO 8601 start time (UTC)
+    - timestamp_end                      # ISO 8601 end time (UTC)
+    - selection_method                   # static | realtime | drift_aware
+    - code_distance                      # 3 | 5 | 7
+    - num_rounds                         # Syndrome extraction rounds
+    - shots                              # Number of shots executed
+    - logical_error_rate                 # Measured logical error rate
+    - raw_counts                         # Full measurement outcomes (JSON)
+    
+  optional_fields:
+    - probe_results                      # Pre-experiment probe data
+    - qubit_layout                       # Physical qubit mapping
+    - calibration_snapshot_id            # Reference to calibration data
+    - job_ids                            # IBM job IDs for provenance
+    - notes                              # Free-text annotations
+
+# Probe Suite Configuration
+probe_suite:
+  # Shots per probe (kept low to conserve QPU time)
+  shots_per_probe: 30
+  
+  # Which probes to run
+  enabled_probes:
+    - t1                                 # T1 relaxation time
+    - t2_ramsey                          # T2* via Ramsey experiment
+    - rb_1q                              # Single-qubit randomized benchmarking
+    - readout_error                      # Assignment fidelity
+  
+  # T1 probe settings
+  t1:
+    delay_times_us: [10, 25, 50, 100, 200]  # Delay times to sample
+    min_survival_threshold: 0.3          # Flag if P(|1>) < 0.3 at 50us
+  
+  # T2 Ramsey settings
+  t2_ramsey:
+    delay_times_us: [5, 10, 20, 40, 80]  # Delay times to sample
+    detuning_hz: 100000                  # 100 kHz detuning for oscillation
+  
+  # Randomized Benchmarking settings
+  rb_1q:
+    clifford_lengths: [1, 5, 10, 20, 50] # Sequence lengths
+    num_samples: 3                       # Random sequences per length
+    interleaved_gate: null               # Optional: interleave specific gate
+  
+  # Readout error settings
+  readout:
+    repetitions: 10                      # Repeat prepare-measure cycles
+
+# QEC Experiment Parameters
+qec_experiments:
+  # Code parameters to sweep
+  distances: [3, 5, 7]                   # Code distances
+  syndrome_rounds: [1, 3, 5, 10]         # Number of syndrome rounds
+  
+  # Fixed parameters
+  code_type: "bit_flip"                  # bit_flip | phase_flip
+  use_dynamic_circuits: true             # Mid-circuit measurement
+  use_conditional_reset: true            # Reset ancillas between rounds
+  
+  # Shots per configuration
+  shots_per_circuit: 4096                # Statistical power for error rates
+  
+  # Initial states to test
+  initial_states:
+    - 0                                  # Logical |0>
+    - 1                                  # Logical |1>
+  
+  # Error injection (for validation only)
+  error_injection:
+    enabled: false                       # Disable for production runs
+    error_types: ["X"]                   # X | Z | Y errors
+    error_positions: "random"            # random | specific indices
+
+# Job Bundling Strategy
+# Multiple circuits can be batched into single jobs for efficiency
+job_bundling:
+  enabled: true
+  max_circuits_per_job: 100              # Balance queue time vs. failure risk
+  group_by:
+    - distance                           # Group same-distance circuits
+    - selection_method                   # Keep methods separate for comparison
+  
+  # Retry policy
+  retry:
+    max_attempts: 3
+    backoff_seconds: 60
+    fail_on_timeout: true
+
+# A/B Testing Protocol
+# Compares baseline (static) selection vs. drift-aware selection
+ab_testing:
+  enabled: true
+  
+  # Experimental arms
+  arms:
+    baseline:
+      selection_method: "static"
+      description: "Select qubits from backend.properties() only"
+    
+    realtime:
+      selection_method: "realtime"
+      description: "Re-select qubits based on 30-shot probes"
+    
+    treatment:
+      selection_method: "drift_aware"
+      description: "Combine probes with drift analysis and change-point detection"
+  
+  # Randomization
+  randomize_order: true                  # Randomize arm execution order
+  
+  # Temporal blocking
+  temporal_blocking:
+    enabled: true
+    block_duration_minutes: 30           # Run all arms within 30-min window
+    min_blocks: 5                        # Minimum blocks for statistics
+  
+  # Primary endpoint
+  primary_endpoint: "logical_error_rate"
+  
+  # Hypothesis
+  null_hypothesis: "No difference in logical error rate between methods"
+  alternative_hypothesis: "Drift-aware method has lower logical error rate"
+  alpha: 0.05                            # Type I error rate
+  power: 0.80                            # Target power (1 - beta)
+
+# Data Output Configuration
+output:
+  base_directory: "data"
+  
+  # Subdirectories
+  raw_directory: "data/raw"              # Raw job results
+  processed_directory: "data/processed"  # Processed experiment records
+  calibration_directory: "data/calibration"  # Calibration snapshots
+  
+  # File formats
+  raw_format: "json"                     # Raw IBM job results
+  processed_format: "parquet"            # Efficient columnar storage
+  calibration_format: "json"             # Human-readable calibration data
+  
+  # Compression
+  compress_raw: true                     # gzip raw JSON files
+  
+  # Provenance
+  include_git_hash: true                 # Record git commit hash
+  include_protocol_hash: true            # Record protocol.yaml hash
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Log files
+  experiment_log: "logs/experiment.log"
+  probe_log: "logs/probes.log"
+  job_log: "logs/jobs.log"
+  
+  # Log rotation
+  max_bytes: 10485760                    # 10 MB per file
+  backup_count: 5                        # Keep 5 rotated files

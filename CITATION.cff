@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Drift-Aware Fault-Tolerance QEC"
+abstract: >-
+  Research framework for investigating how qubit calibration drift 
+  affects quantum error correction fault-tolerance thresholds on 
+  IBM Quantum hardware. Implements lightweight probe circuits, 
+  adaptive qubit selection, and statistical analysis tools for 
+  drift-error correlation studies.
+authors:
+  - family-names: "Author"
+    given-names: "Mark"
+version: "0.1.0"
+date-released: 2025-01-01
+license: MIT
+repository-code: "https://github.com/username/Drift-Aware-Fault-Tolerance-QEC"
+keywords:
+  - quantum computing
+  - quantum error correction
+  - fault tolerance
+  - calibration drift
+  - IBM Quantum
+  - qiskit
+  - repetition code
+references:
+  - type: article
+    title: "Suppressing quantum errors by scaling a surface code logical qubit"
+    authors:
+      - name: "Google Quantum AI"
+    journal: "Nature"
+    year: 2023
+    doi: "10.1038/s41586-022-05434-1"

@@ -1,0 +1,944 @@
+[
+  {
+    "distance": 3,
+    "optimal_interval_hours": 24.0,
+    "optimal_benefit_pct": 89.51121623318159,
+    "optimal_cost_pct": 2.0,
+    "optimal_net_benefit_pct": 87.51121623318159,
+    "efficient_interval_hours": 24.0,
+    "efficient_benefit_pct": 89.51121623318159,
+    "efficient_cost_pct": 2.0,
+    "max_benefit_pct": 89.51487415315896,
+    "all_predictions": [
+      {
+        "interval_hours": 1.0,
+        "predicted_benefit_pct": 60.560330481418944,
+        "daily_cost_pct": 48.0,
+        "net_benefit_pct": 12.560330481418944
+      },
+      {
+        "interval_hours": 2.0,
+        "predicted_benefit_pct": 54.87287194178822,
+        "daily_cost_pct": 24.0,
+        "net_benefit_pct": 30.87287194178822
+      },
+      {
+        "interval_hours": 3.0,
+        "predicted_benefit_pct": 63.63028439983627,
+        "daily_cost_pct": 16.0,
+        "net_benefit_pct": 47.63028439983627
+      },
+      {
+        "interval_hours": 4.0,
+        "predicted_benefit_pct": 63.40135097106818,
+        "daily_cost_pct": 12.0,
+        "net_benefit_pct": 51.40135097106818
+      },
+      {
+        "interval_hours": 5.0,
+        "predicted_benefit_pct": 65.66353883431137,
+        "daily_cost_pct": 9.6,
+        "net_benefit_pct": 56.063538834311366
+      },
+      {
+        "interval_hours": 6.0,
+        "predicted_benefit_pct": 50.82801876474721,
+        "daily_cost_pct": 8.0,
+        "net_benefit_pct": 42.82801876474721
+      },
+      {
+        "interval_hours": 7.0,
+        "predicted_benefit_pct": 83.82015729160102,
+        "daily_cost_pct": 6.857142857142857,
+        "net_benefit_pct": 76.96301443445816
+      },
+      {
+        "interval_hours": 8.0,
+        "predicted_benefit_pct": 82.45413100704427,
+        "daily_cost_pct": 6.0,
+        "net_benefit_pct": 76.45413100704427
+      },
+      {
+        "interval_hours": 9.0,
+        "predicted_benefit_pct": 84.82066607543278,
+        "daily_cost_pct": 5.333333333333333,
+        "net_benefit_pct": 79.48733274209945
+      },
+      {
+        "interval_hours": 10.0,
+        "predicted_benefit_pct": 85.36795739639496,
+        "daily_cost_pct": 4.8,
+        "net_benefit_pct": 80.56795739639496
+      },
+      {
+        "interval_hours": 11.0,
+        "predicted_benefit_pct": 86.64389840222789,
+        "daily_cost_pct": 4.363636363636363,
+        "net_benefit_pct": 82.28026203859153
+      },
+      {
+        "interval_hours": 12.0,
+        "predicted_benefit_pct": 87.4668099942437,
+        "daily_cost_pct": 4.0,
+        "net_benefit_pct": 83.4668099942437
+      },
+      {
+        "interval_hours": 13.0,
+        "predicted_benefit_pct": 85.53737094341717,
+        "daily_cost_pct": 3.6923076923076925,
+        "net_benefit_pct": 81.84506325110948
+      },
+      {
+        "interval_hours": 14.0,
+        "predicted_benefit_pct": 87.37324349516945,
+        "daily_cost_pct": 3.4285714285714284,
+        "net_benefit_pct": 83.94467206659802
+      },
+      {
+        "interval_hours": 15.0,
+        "predicted_benefit_pct": 88.34719993648429,
+        "daily_cost_pct": 3.2,
+        "net_benefit_pct": 85.14719993648428
+      },
+      {
+        "interval_hours": 16.0,
+        "predicted_benefit_pct": 89.51487415315896,
+        "daily_cost_pct": 3.0,
+        "net_benefit_pct": 86.51487415315896
+      },
+      {
+        "interval_hours": 17.0,
+        "predicted_benefit_pct": 87.84079397484211,
+        "daily_cost_pct": 2.823529411764706,
+        "net_benefit_pct": 85.0172645630774
+      },
+      {
+        "interval_hours": 18.0,
+        "predicted_benefit_pct": 87.90808972685969,
+        "daily_cost_pct": 2.6666666666666665,
+        "net_benefit_pct": 85.24142306019301
+      },
+      {
+        "interval_hours": 19.0,
+        "predicted_benefit_pct": 85.50640151731464,
+        "daily_cost_pct": 2.526315789473684,
+        "net_benefit_pct": 82.98008572784096
+      },
+      {
+        "interval_hours": 20.0,
+        "predicted_benefit_pct": 80.49360837236532,
+        "daily_cost_pct": 2.4,
+        "net_benefit_pct": 78.09360837236531
+      },
+      {
+        "interval_hours": 21.0,
+        "predicted_benefit_pct": 88.62209942779452,
+        "daily_cost_pct": 2.2857142857142856,
+        "net_benefit_pct": 86.33638514208023
+      },
+      {
+        "interval_hours": 22.0,
+        "predicted_benefit_pct": 85.46161995778401,
+        "daily_cost_pct": 2.1818181818181817,
+        "net_benefit_pct": 83.27980177596582
+      },
+      {
+        "interval_hours": 23.0,
+        "predicted_benefit_pct": 86.7413417308706,
+        "daily_cost_pct": 2.0869565217391304,
+        "net_benefit_pct": 84.65438520913148
+      },
+      {
+        "interval_hours": 24.0,
+        "predicted_benefit_pct": 89.51121623318159,
+        "daily_cost_pct": 2.0,
+        "net_benefit_pct": 87.51121623318159
+      }
+    ]
+  },
+  {
+    "distance": 5,
+    "optimal_interval_hours": 24.0,
+    "optimal_benefit_pct": 89.68898197766461,
+    "optimal_cost_pct": 2.0,
+    "optimal_net_benefit_pct": 87.68898197766461,
+    "efficient_interval_hours": 24.0,
+    "efficient_benefit_pct": 89.68898197766461,
+    "efficient_cost_pct": 2.0,
+    "max_benefit_pct": 89.68898197766461,
+    "all_predictions": [
+      {
+        "interval_hours": 1.0,
+        "predicted_benefit_pct": 63.08720873195394,
+        "daily_cost_pct": 48.0,
+        "net_benefit_pct": 15.087208731953943
+      },
+      {
+        "interval_hours": 2.0,
+        "predicted_benefit_pct": 58.29525453399662,
+        "daily_cost_pct": 24.0,
+        "net_benefit_pct": 34.29525453399662
+      },
+      {
+        "interval_hours": 3.0,
+        "predicted_benefit_pct": 67.89897995376374,
+        "daily_cost_pct": 16.0,
+        "net_benefit_pct": 51.89897995376374
+      },
+      {
+        "interval_hours": 4.0,
+        "predicted_benefit_pct": 73.9552478702527,
+        "daily_cost_pct": 12.0,
+        "net_benefit_pct": 61.955247870252705
+      },
+      {
+        "interval_hours": 5.0,
+        "predicted_benefit_pct": 84.89481160370225,
+        "daily_cost_pct": 9.6,
+        "net_benefit_pct": 75.29481160370226
+      },
+      {
+        "interval_hours": 6.0,
+        "predicted_benefit_pct": 80.48031785460493,
+        "daily_cost_pct": 8.0,
+        "net_benefit_pct": 72.48031785460493
+      },
+      {
+        "interval_hours": 7.0,
+        "predicted_benefit_pct": 83.80785630039198,
+        "daily_cost_pct": 6.857142857142857,
+        "net_benefit_pct": 76.95071344324911
+      },
+      {
+        "interval_hours": 8.0,
+        "predicted_benefit_pct": 86.45897751190914,
+        "daily_cost_pct": 6.0,
+        "net_benefit_pct": 80.45897751190914
+      },
+      {
+        "interval_hours": 9.0,
+        "predicted_benefit_pct": 85.95608962785691,
+        "daily_cost_pct": 5.333333333333333,
+        "net_benefit_pct": 80.62275629452358
+      },
+      {
+        "interval_hours": 10.0,
+        "predicted_benefit_pct": 88.26435209139635,
+        "daily_cost_pct": 4.8,
+        "net_benefit_pct": 83.46435209139635
+      },
+      {
+        "interval_hours": 11.0,
+        "predicted_benefit_pct": 86.5918325298878,
+        "daily_cost_pct": 4.363636363636363,
+        "net_benefit_pct": 82.22819616625144
+      },
+      {
+        "interval_hours": 12.0,
+        "predicted_benefit_pct": 86.38465546238777,
+        "daily_cost_pct": 4.0,
+        "net_benefit_pct": 82.38465546238777
+      },
+      {
+        "interval_hours": 13.0,
+        "predicted_benefit_pct": 85.82090053231455,
+        "daily_cost_pct": 3.6923076923076925,
+        "net_benefit_pct": 82.12859284000686
+      },
+      {
+        "interval_hours": 14.0,
+        "predicted_benefit_pct": 87.25107159799353,
+        "daily_cost_pct": 3.4285714285714284,
+        "net_benefit_pct": 83.8225001694221
+      },
+      {
+        "interval_hours": 15.0,
+        "predicted_benefit_pct": 86.8573576660134,
+        "daily_cost_pct": 3.2,
+        "net_benefit_pct": 83.6573576660134
+      },
+      {
+        "interval_hours": 16.0,
+        "predicted_benefit_pct": 88.1828548190921,
+        "daily_cost_pct": 3.0,
+        "net_benefit_pct": 85.1828548190921
+      },
+      {
+        "interval_hours": 17.0,
+        "predicted_benefit_pct": 88.03902524378906,
+        "daily_cost_pct": 2.823529411764706,
+        "net_benefit_pct": 85.21549583202435
+      },
+      {
+        "interval_hours": 18.0,
+        "predicted_benefit_pct": 88.16245555427474,
+        "daily_cost_pct": 2.6666666666666665,
+        "net_benefit_pct": 85.49578888760807
+      },
+      {
+        "interval_hours": 19.0,
+        "predicted_benefit_pct": 86.85604616840963,
+        "daily_cost_pct": 2.526315789473684,
+        "net_benefit_pct": 84.32973037893595
+      },
+      {
+        "interval_hours": 20.0,
+        "predicted_benefit_pct": 86.12073335376401,
+        "daily_cost_pct": 2.4,
+        "net_benefit_pct": 83.720733353764
+      },
+      {
+        "interval_hours": 21.0,
+        "predicted_benefit_pct": 88.27929298624792,
+        "daily_cost_pct": 2.2857142857142856,
+        "net_benefit_pct": 85.99357870053363
+      },
+      {
+        "interval_hours": 22.0,
+        "predicted_benefit_pct": 88.71996726389452,
+        "daily_cost_pct": 2.1818181818181817,
+        "net_benefit_pct": 86.53814908207633
+      },
+      {
+        "interval_hours": 23.0,
+        "predicted_benefit_pct": 87.79738051930522,
+        "daily_cost_pct": 2.0869565217391304,
+        "net_benefit_pct": 85.7104239975661
+      },
+      {
+        "interval_hours": 24.0,
+        "predicted_benefit_pct": 89.68898197766461,
+        "daily_cost_pct": 2.0,
+        "net_benefit_pct": 87.68898197766461
+      }
+    ]
+  },
+  {
+    "distance": 7,
+    "optimal_interval_hours": 24.0,
+    "optimal_benefit_pct": 90.06308670274433,
+    "optimal_cost_pct": 2.0,
+    "optimal_net_benefit_pct": 88.06308670274433,
+    "efficient_interval_hours": 24.0,
+    "efficient_benefit_pct": 90.06308670274433,
+    "efficient_cost_pct": 2.0,
+    "max_benefit_pct": 90.06308670274433,
+    "all_predictions": [
+      {
+        "interval_hours": 1.0,
+        "predicted_benefit_pct": 62.09880290619334,
+        "daily_cost_pct": 48.0,
+        "net_benefit_pct": 14.098802906193342
+      },
+      {
+        "interval_hours": 2.0,
+        "predicted_benefit_pct": 61.80922212021564,
+        "daily_cost_pct": 24.0,
+        "net_benefit_pct": 37.80922212021564
+      },
+      {
+        "interval_hours": 3.0,
+        "predicted_benefit_pct": 71.3055397736475,
+        "daily_cost_pct": 16.0,
+        "net_benefit_pct": 55.305539773647496
+      },
+      {
+        "interval_hours": 4.0,
+        "predicted_benefit_pct": 74.98482728565307,
+        "daily_cost_pct": 12.0,
+        "net_benefit_pct": 62.98482728565307
+      },
+      {
+        "interval_hours": 5.0,
+        "predicted_benefit_pct": 82.64097789753959,
+        "daily_cost_pct": 9.6,
+        "net_benefit_pct": 73.04097789753959
+      },
+      {
+        "interval_hours": 6.0,
+        "predicted_benefit_pct": 80.77390560973997,
+        "daily_cost_pct": 8.0,
+        "net_benefit_pct": 72.77390560973997
+      },
+      {
+        "interval_hours": 7.0,
+        "predicted_benefit_pct": 83.30743258704362,
+        "daily_cost_pct": 6.857142857142857,
+        "net_benefit_pct": 76.45028972990076
+      },
+      {
+        "interval_hours": 8.0,
+        "predicted_benefit_pct": 85.51626386063704,
+        "daily_cost_pct": 6.0,
+        "net_benefit_pct": 79.51626386063704
+      },
+      {
+        "interval_hours": 9.0,
+        "predicted_benefit_pct": 85.48158620506034,
+        "daily_cost_pct": 5.333333333333333,
+        "net_benefit_pct": 80.14825287172701
+      },
+      {
+        "interval_hours": 10.0,
+        "predicted_benefit_pct": 87.88093037106216,
+        "daily_cost_pct": 4.8,
+        "net_benefit_pct": 83.08093037106217
+      },
+      {
+        "interval_hours": 11.0,
+        "predicted_benefit_pct": 86.39212511313661,
+        "daily_cost_pct": 4.363636363636363,
+        "net_benefit_pct": 82.02848874950026
+      },
+      {
+        "interval_hours": 12.0,
+        "predicted_benefit_pct": 87.42571120756412,
+        "daily_cost_pct": 4.0,
+        "net_benefit_pct": 83.42571120756412
+      },
+      {
+        "interval_hours": 13.0,
+        "predicted_benefit_pct": 86.35592490472105,
+        "daily_cost_pct": 3.6923076923076925,
+        "net_benefit_pct": 82.66361721241336
+      },
+      {
+        "interval_hours": 14.0,
+        "predicted_benefit_pct": 87.51951966787627,
+        "daily_cost_pct": 3.4285714285714284,
+        "net_benefit_pct": 84.09094823930484
+      },
+      {
+        "interval_hours": 15.0,
+        "predicted_benefit_pct": 87.25426336123104,
+        "daily_cost_pct": 3.2,
+        "net_benefit_pct": 84.05426336123104
+      },
+      {
+        "interval_hours": 16.0,
+        "predicted_benefit_pct": 88.38965223754796,
+        "daily_cost_pct": 3.0,
+        "net_benefit_pct": 85.38965223754796
+      },
+      {
+        "interval_hours": 17.0,
+        "predicted_benefit_pct": 88.66870756214671,
+        "daily_cost_pct": 2.823529411764706,
+        "net_benefit_pct": 85.845178150382
+      },
+      {
+        "interval_hours": 18.0,
+        "predicted_benefit_pct": 88.4450512652258,
+        "daily_cost_pct": 2.6666666666666665,
+        "net_benefit_pct": 85.77838459855913
+      },
+      {
+        "interval_hours": 19.0,
+        "predicted_benefit_pct": 87.52554438680923,
+        "daily_cost_pct": 2.526315789473684,
+        "net_benefit_pct": 84.99922859733555
+      },
+      {
+        "interval_hours": 20.0,
+        "predicted_benefit_pct": 88.41901496187413,
+        "daily_cost_pct": 2.4,
+        "net_benefit_pct": 86.01901496187412
+      },
+      {
+        "interval_hours": 21.0,
+        "predicted_benefit_pct": 89.64181151507616,
+        "daily_cost_pct": 2.2857142857142856,
+        "net_benefit_pct": 87.35609722936186
+      },
+      {
+        "interval_hours": 22.0,
+        "predicted_benefit_pct": 89.09252143376254,
+        "daily_cost_pct": 2.1818181818181817,
+        "net_benefit_pct": 86.91070325194435
+      },
+      {
+        "interval_hours": 23.0,
+        "predicted_benefit_pct": 88.64713832264533,
+        "daily_cost_pct": 2.0869565217391304,
+        "net_benefit_pct": 86.56018180090621
+      },
+      {
+        "interval_hours": 24.0,
+        "predicted_benefit_pct": 90.06308670274433,
+        "daily_cost_pct": 2.0,
+        "net_benefit_pct": 88.06308670274433
+      }
+    ]
+  },
+  {
+    "distance": 9,
+    "optimal_interval_hours": 24.0,
+    "optimal_benefit_pct": 89.89644392791895,
+    "optimal_cost_pct": 2.0,
+    "optimal_net_benefit_pct": 87.89644392791895,
+    "efficient_interval_hours": 24.0,
+    "efficient_benefit_pct": 89.89644392791895,
+    "efficient_cost_pct": 2.0,
+    "max_benefit_pct": 89.89644392791895,
+    "all_predictions": [
+      {
+        "interval_hours": 1.0,
+        "predicted_benefit_pct": 58.1588136816086,
+        "daily_cost_pct": 48.0,
+        "net_benefit_pct": 10.1588136816086
+      },
+      {
+        "interval_hours": 2.0,
+        "predicted_benefit_pct": 65.44675511666428,
+        "daily_cost_pct": 24.0,
+        "net_benefit_pct": 41.44675511666428
+      },
+      {
+        "interval_hours": 3.0,
+        "predicted_benefit_pct": 73.79732834470427,
+        "daily_cost_pct": 16.0,
+        "net_benefit_pct": 57.79732834470427
+      },
+      {
+        "interval_hours": 4.0,
+        "predicted_benefit_pct": 76.0739100096027,
+        "daily_cost_pct": 12.0,
+        "net_benefit_pct": 64.0739100096027
+      },
+      {
+        "interval_hours": 5.0,
+        "predicted_benefit_pct": 83.25462636399222,
+        "daily_cost_pct": 9.6,
+        "net_benefit_pct": 73.65462636399222
+      },
+      {
+        "interval_hours": 6.0,
+        "predicted_benefit_pct": 80.94667342664728,
+        "daily_cost_pct": 8.0,
+        "net_benefit_pct": 72.94667342664728
+      },
+      {
+        "interval_hours": 7.0,
+        "predicted_benefit_pct": 84.04074233445746,
+        "daily_cost_pct": 6.857142857142857,
+        "net_benefit_pct": 77.1835994773146
+      },
+      {
+        "interval_hours": 8.0,
+        "predicted_benefit_pct": 84.4809539362006,
+        "daily_cost_pct": 6.0,
+        "net_benefit_pct": 78.4809539362006
+      },
+      {
+        "interval_hours": 9.0,
+        "predicted_benefit_pct": 84.81874454615246,
+        "daily_cost_pct": 5.333333333333333,
+        "net_benefit_pct": 79.48541121281913
+      },
+      {
+        "interval_hours": 10.0,
+        "predicted_benefit_pct": 87.08880470270738,
+        "daily_cost_pct": 4.8,
+        "net_benefit_pct": 82.28880470270738
+      },
+      {
+        "interval_hours": 11.0,
+        "predicted_benefit_pct": 85.5063878840405,
+        "daily_cost_pct": 4.363636363636363,
+        "net_benefit_pct": 81.14275152040415
+      },
+      {
+        "interval_hours": 12.0,
+        "predicted_benefit_pct": 87.30997931974805,
+        "daily_cost_pct": 4.0,
+        "net_benefit_pct": 83.30997931974805
+      },
+      {
+        "interval_hours": 13.0,
+        "predicted_benefit_pct": 86.0866441505657,
+        "daily_cost_pct": 3.6923076923076925,
+        "net_benefit_pct": 82.39433645825801
+      },
+      {
+        "interval_hours": 14.0,
+        "predicted_benefit_pct": 88.1769620578199,
+        "daily_cost_pct": 3.4285714285714284,
+        "net_benefit_pct": 84.74839062924848
+      },
+      {
+        "interval_hours": 15.0,
+        "predicted_benefit_pct": 87.87378012419369,
+        "daily_cost_pct": 3.2,
+        "net_benefit_pct": 84.67378012419368
+      },
+      {
+        "interval_hours": 16.0,
+        "predicted_benefit_pct": 88.81727789204778,
+        "daily_cost_pct": 3.0,
+        "net_benefit_pct": 85.81727789204778
+      },
+      {
+        "interval_hours": 17.0,
+        "predicted_benefit_pct": 89.08061206298093,
+        "daily_cost_pct": 2.823529411764706,
+        "net_benefit_pct": 86.25708265121622
+      },
+      {
+        "interval_hours": 18.0,
+        "predicted_benefit_pct": 88.70241225683365,
+        "daily_cost_pct": 2.6666666666666665,
+        "net_benefit_pct": 86.03574559016698
+      },
+      {
+        "interval_hours": 19.0,
+        "predicted_benefit_pct": 88.22803957717352,
+        "daily_cost_pct": 2.526315789473684,
+        "net_benefit_pct": 85.70172378769983
+      },
+      {
+        "interval_hours": 20.0,
+        "predicted_benefit_pct": 88.76184514898485,
+        "daily_cost_pct": 2.4,
+        "net_benefit_pct": 86.36184514898484
+      },
+      {
+        "interval_hours": 21.0,
+        "predicted_benefit_pct": 89.53569341385621,
+        "daily_cost_pct": 2.2857142857142856,
+        "net_benefit_pct": 87.24997912814192
+      },
+      {
+        "interval_hours": 22.0,
+        "predicted_benefit_pct": 89.3834939935699,
+        "daily_cost_pct": 2.1818181818181817,
+        "net_benefit_pct": 87.20167581175171
+      },
+      {
+        "interval_hours": 23.0,
+        "predicted_benefit_pct": 89.08345164383186,
+        "daily_cost_pct": 2.0869565217391304,
+        "net_benefit_pct": 86.99649512209274
+      },
+      {
+        "interval_hours": 24.0,
+        "predicted_benefit_pct": 89.89644392791895,
+        "daily_cost_pct": 2.0,
+        "net_benefit_pct": 87.89644392791895
+      }
+    ]
+  },
+  {
+    "distance": 11,
+    "optimal_interval_hours": 24.0,
+    "optimal_benefit_pct": 89.81448131808831,
+    "optimal_cost_pct": 2.0,
+    "optimal_net_benefit_pct": 87.81448131808831,
+    "efficient_interval_hours": 24.0,
+    "efficient_benefit_pct": 89.81448131808831,
+    "efficient_cost_pct": 2.0,
+    "max_benefit_pct": 89.81448131808831,
+    "all_predictions": [
+      {
+        "interval_hours": 1.0,
+        "predicted_benefit_pct": 57.79014758126519,
+        "daily_cost_pct": 48.0,
+        "net_benefit_pct": 9.790147581265188
+      },
+      {
+        "interval_hours": 2.0,
+        "predicted_benefit_pct": 66.83387913824589,
+        "daily_cost_pct": 24.0,
+        "net_benefit_pct": 42.83387913824589
+      },
+      {
+        "interval_hours": 3.0,
+        "predicted_benefit_pct": 75.58658089241088,
+        "daily_cost_pct": 16.0,
+        "net_benefit_pct": 59.58658089241088
+      },
+      {
+        "interval_hours": 4.0,
+        "predicted_benefit_pct": 78.69236638137936,
+        "daily_cost_pct": 12.0,
+        "net_benefit_pct": 66.69236638137936
+      },
+      {
+        "interval_hours": 5.0,
+        "predicted_benefit_pct": 81.64117226339962,
+        "daily_cost_pct": 9.6,
+        "net_benefit_pct": 72.04117226339963
+      },
+      {
+        "interval_hours": 6.0,
+        "predicted_benefit_pct": 80.68202892585946,
+        "daily_cost_pct": 8.0,
+        "net_benefit_pct": 72.68202892585946
+      },
+      {
+        "interval_hours": 7.0,
+        "predicted_benefit_pct": 83.91268385907948,
+        "daily_cost_pct": 6.857142857142857,
+        "net_benefit_pct": 77.05554100193662
+      },
+      {
+        "interval_hours": 8.0,
+        "predicted_benefit_pct": 85.45591457796505,
+        "daily_cost_pct": 6.0,
+        "net_benefit_pct": 79.45591457796505
+      },
+      {
+        "interval_hours": 9.0,
+        "predicted_benefit_pct": 85.59862904887578,
+        "daily_cost_pct": 5.333333333333333,
+        "net_benefit_pct": 80.26529571554245
+      },
+      {
+        "interval_hours": 10.0,
+        "predicted_benefit_pct": 87.20610633174425,
+        "daily_cost_pct": 4.8,
+        "net_benefit_pct": 82.40610633174425
+      },
+      {
+        "interval_hours": 11.0,
+        "predicted_benefit_pct": 85.42099685855788,
+        "daily_cost_pct": 4.363636363636363,
+        "net_benefit_pct": 81.05736049492153
+      },
+      {
+        "interval_hours": 12.0,
+        "predicted_benefit_pct": 87.53628776934704,
+        "daily_cost_pct": 4.0,
+        "net_benefit_pct": 83.53628776934704
+      },
+      {
+        "interval_hours": 13.0,
+        "predicted_benefit_pct": 86.07222525403284,
+        "daily_cost_pct": 3.6923076923076925,
+        "net_benefit_pct": 82.37991756172515
+      },
+      {
+        "interval_hours": 14.0,
+        "predicted_benefit_pct": 88.5181721560034,
+        "daily_cost_pct": 3.4285714285714284,
+        "net_benefit_pct": 85.08960072743197
+      },
+      {
+        "interval_hours": 15.0,
+        "predicted_benefit_pct": 88.39555726913888,
+        "daily_cost_pct": 3.2,
+        "net_benefit_pct": 85.19555726913887
+      },
+      {
+        "interval_hours": 16.0,
+        "predicted_benefit_pct": 88.94036923298509,
+        "daily_cost_pct": 3.0,
+        "net_benefit_pct": 85.94036923298509
+      },
+      {
+        "interval_hours": 17.0,
+        "predicted_benefit_pct": 89.13196831068703,
+        "daily_cost_pct": 2.823529411764706,
+        "net_benefit_pct": 86.30843889892232
+      },
+      {
+        "interval_hours": 18.0,
+        "predicted_benefit_pct": 88.98140537598348,
+        "daily_cost_pct": 2.6666666666666665,
+        "net_benefit_pct": 86.31473870931681
+      },
+      {
+        "interval_hours": 19.0,
+        "predicted_benefit_pct": 88.70610144901998,
+        "daily_cost_pct": 2.526315789473684,
+        "net_benefit_pct": 86.1797856595463
+      },
+      {
+        "interval_hours": 20.0,
+        "predicted_benefit_pct": 88.75206127488048,
+        "daily_cost_pct": 2.4,
+        "net_benefit_pct": 86.35206127488047
+      },
+      {
+        "interval_hours": 21.0,
+        "predicted_benefit_pct": 89.44638065822613,
+        "daily_cost_pct": 2.2857142857142856,
+        "net_benefit_pct": 87.16066637251184
+      },
+      {
+        "interval_hours": 22.0,
+        "predicted_benefit_pct": 89.25115780382365,
+        "daily_cost_pct": 2.1818181818181817,
+        "net_benefit_pct": 87.06933962200546
+      },
+      {
+        "interval_hours": 23.0,
+        "predicted_benefit_pct": 89.16434287137847,
+        "daily_cost_pct": 2.0869565217391304,
+        "net_benefit_pct": 87.07738634963934
+      },
+      {
+        "interval_hours": 24.0,
+        "predicted_benefit_pct": 89.81448131808831,
+        "daily_cost_pct": 2.0,
+        "net_benefit_pct": 87.81448131808831
+      }
+    ]
+  },
+  {
+    "distance": 13,
+    "optimal_interval_hours": 24.0,
+    "optimal_benefit_pct": 89.85524732997791,
+    "optimal_cost_pct": 2.0,
+    "optimal_net_benefit_pct": 87.85524732997791,
+    "efficient_interval_hours": 24.0,
+    "efficient_benefit_pct": 89.85524732997791,
+    "efficient_cost_pct": 2.0,
+    "max_benefit_pct": 89.85524732997791,
+    "all_predictions": [
+      {
+        "interval_hours": 1.0,
+        "predicted_benefit_pct": 58.23274113955176,
+        "daily_cost_pct": 48.0,
+        "net_benefit_pct": 10.232741139551763
+      },
+      {
+        "interval_hours": 2.0,
+        "predicted_benefit_pct": 68.03899545318335,
+        "daily_cost_pct": 24.0,
+        "net_benefit_pct": 44.03899545318335
+      },
+      {
+        "interval_hours": 3.0,
+        "predicted_benefit_pct": 75.86255266399381,
+        "daily_cost_pct": 16.0,
+        "net_benefit_pct": 59.86255266399381
+      },
+      {
+        "interval_hours": 4.0,
+        "predicted_benefit_pct": 79.28483685538043,
+        "daily_cost_pct": 12.0,
+        "net_benefit_pct": 67.28483685538043
+      },
+      {
+        "interval_hours": 5.0,
+        "predicted_benefit_pct": 81.42945802149411,
+        "daily_cost_pct": 9.6,
+        "net_benefit_pct": 71.82945802149412
+      },
+      {
+        "interval_hours": 6.0,
+        "predicted_benefit_pct": 80.77236944169566,
+        "daily_cost_pct": 8.0,
+        "net_benefit_pct": 72.77236944169566
+      },
+      {
+        "interval_hours": 7.0,
+        "predicted_benefit_pct": 83.88516531405057,
+        "daily_cost_pct": 6.857142857142857,
+        "net_benefit_pct": 77.0280224569077
+      },
+      {
+        "interval_hours": 8.0,
+        "predicted_benefit_pct": 85.32440382263557,
+        "daily_cost_pct": 6.0,
+        "net_benefit_pct": 79.32440382263557
+      },
+      {
+        "interval_hours": 9.0,
+        "predicted_benefit_pct": 85.73974299811043,
+        "daily_cost_pct": 5.333333333333333,
+        "net_benefit_pct": 80.4064096647771
+      },
+      {
+        "interval_hours": 10.0,
+        "predicted_benefit_pct": 87.28898742362946,
+        "daily_cost_pct": 4.8,
+        "net_benefit_pct": 82.48898742362947
+      },
+      {
+        "interval_hours": 11.0,
+        "predicted_benefit_pct": 85.37631947560273,
+        "daily_cost_pct": 4.363636363636363,
+        "net_benefit_pct": 81.01268311196637
+      },
+      {
+        "interval_hours": 12.0,
+        "predicted_benefit_pct": 88.00009571638455,
+        "daily_cost_pct": 4.0,
+        "net_benefit_pct": 84.00009571638455
+      },
+      {
+        "interval_hours": 13.0,
+        "predicted_benefit_pct": 86.88024060676877,
+        "daily_cost_pct": 3.6923076923076925,
+        "net_benefit_pct": 83.18793291446107
+      },
+      {
+        "interval_hours": 14.0,
+        "predicted_benefit_pct": 88.47758569757296,
+        "daily_cost_pct": 3.4285714285714284,
+        "net_benefit_pct": 85.04901426900153
+      },
+      {
+        "interval_hours": 15.0,
+        "predicted_benefit_pct": 88.2983796552509,
+        "daily_cost_pct": 3.2,
+        "net_benefit_pct": 85.0983796552509
+      },
+      {
+        "interval_hours": 16.0,
+        "predicted_benefit_pct": 88.8835257785339,
+        "daily_cost_pct": 3.0,
+        "net_benefit_pct": 85.8835257785339
+      },
+      {
+        "interval_hours": 17.0,
+        "predicted_benefit_pct": 89.13554989598134,
+        "daily_cost_pct": 2.823529411764706,
+        "net_benefit_pct": 86.31202048421663
+      },
+      {
+        "interval_hours": 18.0,
+        "predicted_benefit_pct": 89.16303345185068,
+        "daily_cost_pct": 2.6666666666666665,
+        "net_benefit_pct": 86.49636678518401
+      },
+      {
+        "interval_hours": 19.0,
+        "predicted_benefit_pct": 88.79176140312401,
+        "daily_cost_pct": 2.526315789473684,
+        "net_benefit_pct": 86.26544561365033
+      },
+      {
+        "interval_hours": 20.0,
+        "predicted_benefit_pct": 88.76984698148472,
+        "daily_cost_pct": 2.4,
+        "net_benefit_pct": 86.36984698148471
+      },
+      {
+        "interval_hours": 21.0,
+        "predicted_benefit_pct": 89.43354121430377,
+        "daily_cost_pct": 2.2857142857142856,
+        "net_benefit_pct": 87.14782692858948
+      },
+      {
+        "interval_hours": 22.0,
+        "predicted_benefit_pct": 89.27386407235886,
+        "daily_cost_pct": 2.1818181818181817,
+        "net_benefit_pct": 87.09204589054067
+      },
+      {
+        "interval_hours": 23.0,
+        "predicted_benefit_pct": 89.22716532925357,
+        "daily_cost_pct": 2.0869565217391304,
+        "net_benefit_pct": 87.14020880751444
+      },
+      {
+        "interval_hours": 24.0,
+        "predicted_benefit_pct": 89.85524732997791,
+        "daily_cost_pct": 2.0,
+        "net_benefit_pct": 87.85524732997791
+      }
+    ]
+  }
+]

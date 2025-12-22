@@ -1,0 +1,72 @@
+{
+  "start_time": "2025-12-09T23:55:01.431480",
+  "surface_code_results": [
+    {
+      "experiment": "surface_code_d3",
+      "backend": "ibm_fez",
+      "timestamp": "2025-12-09T23:55:19.827102",
+      "config": {
+        "syndrome_rounds": 3,
+        "shots": 4096,
+        "repetitions": 3,
+        "logical_states": [
+          "+",
+          "0"
+        ]
+      },
+      "runs": [],
+      "error": "Session.__init__() got an unexpected keyword argument 'service'"
+    }
+  ],
+  "deployment_results": [
+    {
+      "session_type": "baseline",
+      "backend": "ibm_fez",
+      "timestamp": "2025-12-09T23:55:38.019334",
+      "config": {
+        "baseline_shots": 4096,
+        "daqec_shots": 4096,
+        "probe_shots": 30,
+        "sessions_per_key": 2
+      },
+      "error": "Session.__init__() got an unexpected keyword argument 'service'"
+    },
+    {
+      "session_type": "baseline",
+      "backend": "ibm_fez",
+      "timestamp": "2025-12-09T23:55:39.779577",
+      "config": {
+        "baseline_shots": 4096,
+        "daqec_shots": 4096,
+        "probe_shots": 30,
+        "sessions_per_key": 2
+      },
+      "error": "Session.__init__() got an unexpected keyword argument 'service'"
+    },
+    {
+      "session_type": "daqec",
+      "backend": "ibm_fez",
+      "timestamp": "2025-12-09T23:55:56.638856",
+      "config": {
+        "baseline_shots": 4096,
+        "daqec_shots": 4096,
+        "probe_shots": 30,
+        "sessions_per_key": 2
+      },
+      "error": "Session.__init__() got an unexpected keyword argument 'service'"
+    },
+    {
+      "session_type": "daqec",
+      "backend": "ibm_fez",
+      "timestamp": "2025-12-09T23:55:58.631827",
+      "config": {
+        "baseline_shots": 4096,
+        "daqec_shots": 4096,
+        "probe_shots": 30,
+        "sessions_per_key": 2
+      },
+      "error": "Session.__init__() got an unexpected keyword argument 'service'"
+    }
+  ],
+  "end_time": "2025-12-09T23:56:00.088180"
+}

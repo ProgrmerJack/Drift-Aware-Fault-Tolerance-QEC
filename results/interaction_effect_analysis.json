@@ -1,0 +1,28 @@
+{
+  "overall": {
+    "n_pairs": 69,
+    "mean_improvement_pct": -3.620539423810759,
+    "correlation": 0.7071254851026932,
+    "correlation_pvalue": 1.1128188298693697e-11
+  },
+  "low_error_stratum": {
+    "n_pairs": 35,
+    "baseline_mean": 0.09523585714285714,
+    "baseline_std": 0.008433055112935949,
+    "daqec_mean": 0.10885188571428572,
+    "daqec_std": 0.014555352122099942,
+    "improvement_pct": -14.94266128296322,
+    "t_statistic": -5.182056270172405,
+    "p_value": 9.970889207847069e-06
+  },
+  "high_error_stratum": {
+    "n_pairs": 34,
+    "baseline_mean": 0.12059832352941179,
+    "baseline_std": 0.007806137359021711,
+    "daqec_mean": 0.11058132352941177,
+    "daqec_std": 0.01187389196800756,
+    "improvement_pct": 8.034586019434423,
+    "t_statistic": 4.41830168485553,
+    "p_value": 0.00010121376813563051
+  }
+}

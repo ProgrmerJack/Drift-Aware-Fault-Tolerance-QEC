@@ -1,0 +1,394 @@
+# =============================================================================
+# DRIFT-AWARE QEC EXPERIMENTAL PROTOCOL
+# Pre-Registered Protocol v1.0 (LOCKED)
+# =============================================================================
+# This file defines the complete experimental protocol. Once committed with
+# tag `protocol_v1_locked`, NO modifications are permitted without creating
+# a new protocol version with documented amendments.
+# =============================================================================
+
+protocol:
+  version: "1.0"
+  lock_date: null  # Set by scripts/lock_protocol.py
+  commit_hash: null  # Auto-filled at lock time
+  claims_file: "CLAIMS.md"
+  claims_hash: null  # SHA-256 of CLAIMS.md at lock time
+  
+# =============================================================================
+# PRIMARY ENDPOINT DEFINITION
+# =============================================================================
+primary_endpoint:
+  name: "Relative reduction in logical failure probability"
+  metric: "paired_log_odds_ratio"
+  comparison: "drift_aware_full_stack vs baseline_static"
+  hypothesis: "two-sided"
+  alpha: 0.05
+  power_target: 0.80
+  minimum_effect_size: 0.20  # 20% relative reduction
+
+# =============================================================================
+# BACKEND CONFIGURATION
+# =============================================================================
+backends:
+  # Primary backends (must include all)
+  primary:
+    - name: "ibm_brisbane"
+      min_qubits: 127
+      required: true
+      
+    - name: "ibm_kyoto"
+      min_qubits: 127
+      required: true
+      
+    - name: "ibm_osaka"
+      min_qubits: 127
+      required: true
+  
+  # Fallback backends (use if primary unavailable)
+  fallback:
+    - name: "ibm_sherbrooke"
+      min_qubits: 127
+      required: false
+
+  # Exclusion rules (applied automatically)
+  exclusion_rules:
+    - rule: "backend_under_maintenance"
+      action: "skip_and_log"
+    - rule: "calibration_older_than_24h"
+      action: "skip_and_log"
+    - rule: "average_t1_below_50us"
+      action: "skip_and_log"
+    - rule: "ecr_error_above_5pct"
+      action: "flag_for_review"
+
+# =============================================================================
+# TEMPORAL SCHEDULE
+# =============================================================================
+schedule:
+  # Minimum requirements for publication
+  minimum_days: 3
+  target_days: 7
+  
+  # Data collection windows
+  collection_windows:
+    - name: "morning"
+      start_hour_utc: 8
+      end_hour_utc: 12
+    - name: "evening"
+      start_hour_utc: 18
+      end_hour_utc: 22
+  
+  # Repeat structure
+  sessions_per_day: 2
+  min_hours_between_sessions: 4
+
+# =============================================================================
+# PROBE CIRCUIT CONFIGURATION
+# =============================================================================
+probes:
+  # Shot budget per probe (critical for QPU budget)
+  shots_per_probe: 30
+  
+  # Probe types to execute
+  types:
+    t1_estimate:
+      enabled: true
+      delays_us: [10, 50, 100, 200, 500]
+      shots: 30
+      
+    t2_ramsey:
+      enabled: true
+      delays_us: [5, 25, 50, 100, 200]
+      shots: 30
+      
+    readout_error:
+      enabled: true
+      shots: 30
+      states: ["0", "1"]
+      
+    single_qubit_rb:
+      enabled: false  # Too expensive for Open Plan
+      lengths: [1, 10, 20, 50]
+      shots: 30
+      
+    two_qubit_rb:
+      enabled: false  # Too expensive for Open Plan
+      lengths: [1, 5, 10, 20]
+      shots: 30
+  
+  # Refresh cadence
+  refresh_interval_hours: 4
+  
+  # Timeout for probe jobs
+  timeout_seconds: 300
+
+# =============================================================================
+# QEC EXPERIMENT CONFIGURATION
+# =============================================================================
+qec:
+  # Code family
+  code_type: "repetition_bit_flip"
+  
+  # Distances to test (must be odd)
+  distances: [3, 5, 7]
+  
+  # Syndrome measurement rounds per distance
+  syndrome_rounds:
+    distance_3: [1, 2, 3]
+    distance_5: [1, 2, 3]
+    distance_7: [1, 2, 3]
+  
+  # Shots per circuit configuration
+  shots_per_config: 4096
+  
+  # Initial states to prepare
+  initial_states: ["0", "1"]
+  
+  # Circuit optimization
+  optimization_level: 3
+  scheduling_method: "alap"
+  
+  # Dynamic circuits (if supported)
+  use_dynamic_circuits: false  # Simpler for reproducibility
+  
+  # Measurement basis
+  final_measurement: true
+
+# =============================================================================
+# QUBIT SELECTION CONFIGURATION
+# =============================================================================
+selection:
+  # Selection strategies to compare
+  strategies:
+    - name: "baseline_static"
+      description: "Use backend properties only, no probe refresh"
+      use_probes: false
+      update_frequency: "once_per_day"
+      
+    - name: "drift_aware_probes"
+      description: "Refresh with 30-shot probes every 4 hours"
+      use_probes: true
+      update_frequency: "per_session"
+      
+    - name: "drift_aware_full_stack"
+      description: "Probes + adaptive-prior decoding"
+      use_probes: true
+      use_adaptive_decoder: true
+      update_frequency: "per_session"
+  
+  # Objective function for qubit ranking
+  objective:
+    weights:
+      t1: 0.25
+      t2: 0.25
+      readout_error: 0.25
+      two_qubit_gate_error: 0.25
+    
+    # Minimum connectivity for repetition code
+    connectivity: "linear_chain"
+    
+    # Number of candidate sets to evaluate
+    n_candidates: 10
+
+# =============================================================================
+# DECODER CONFIGURATION
+# =============================================================================
+decoder:
+  # Baseline decoder
+  baseline:
+    type: "minimum_weight_perfect_matching"
+    use_priors: false
+    
+  # Adaptive decoder
+  adaptive:
+    type: "minimum_weight_perfect_matching"
+    use_priors: true
+    prior_source: "probe_estimates"
+    prior_update_rule: "bayesian_running_average"
+    prior_window_shots: 100
+
+# =============================================================================
+# STATISTICAL ANALYSIS PLAN (PRE-REGISTERED)
+# =============================================================================
+statistics:
+  # Primary analysis
+  primary:
+    test: "paired_bootstrap"
+    n_bootstrap: 10000
+    confidence_level: 0.95
+    random_seed: 42
+    
+  # Secondary analysis
+  secondary:
+    test: "mixed_effects_model"
+    fixed_effects: ["strategy", "distance"]
+    random_effects: ["backend", "day"]
+    
+  # Multiple comparisons
+  multiple_comparisons:
+    method: "holm_bonferroni"
+    family: "secondary_endpoints_only"
+    
+  # Effect size reporting
+  effect_sizes:
+    - "cohens_d"
+    - "relative_risk_reduction"
+    - "number_needed_to_treat"
+
+# =============================================================================
+# DATA QUALITY GATES
+# =============================================================================
+quality_gates:
+  # Minimum sample sizes
+  min_shots_per_config: 1000
+  min_sessions_per_backend: 3
+  min_days_total: 3
+  
+  # Data quality checks
+  checks:
+    - name: "job_completion"
+      threshold: 0.95
+      action: "fail_if_below"
+      
+    - name: "timestamp_alignment"
+      max_drift_seconds: 60
+      action: "warn_if_exceeded"
+      
+    - name: "calibration_freshness"
+      max_age_hours: 24
+      action: "flag_if_exceeded"
+
+# =============================================================================
+# OUTPUT SCHEMA (ENFORCED)
+# =============================================================================
+output_schema:
+  master_parquet:
+    required_columns:
+      # Identifiers
+      - name: "run_id"
+        dtype: "string"
+        description: "Unique identifier for this run"
+      - name: "backend"
+        dtype: "string"
+        description: "IBM backend name"
+      - name: "timestamp_utc"
+        dtype: "datetime64[ns]"
+        description: "Job submission time in UTC"
+      - name: "calibration_timestamp"
+        dtype: "datetime64[ns]"
+        description: "Backend calibration timestamp"
+        
+      # Experiment parameters
+      - name: "strategy"
+        dtype: "string"
+        description: "Selection strategy used"
+      - name: "distance"
+        dtype: "int64"
+        description: "Code distance"
+      - name: "syndrome_rounds"
+        dtype: "int64"
+        description: "Number of syndrome measurement rounds"
+      - name: "shots"
+        dtype: "int64"
+        description: "Number of shots executed"
+      - name: "initial_state"
+        dtype: "string"
+        description: "Prepared logical state"
+        
+      # Qubit layout
+      - name: "data_qubits"
+        dtype: "string"  # JSON array
+        description: "Data qubit indices"
+      - name: "ancilla_qubits"
+        dtype: "string"  # JSON array
+        description: "Ancilla qubit indices"
+      - name: "couplers"
+        dtype: "string"  # JSON array
+        description: "Coupler indices used"
+        
+      # Backend properties snapshot
+      - name: "avg_t1_us"
+        dtype: "float64"
+        description: "Average T1 of data qubits (microseconds)"
+      - name: "avg_t2_us"
+        dtype: "float64"
+        description: "Average T2 of data qubits (microseconds)"
+      - name: "avg_readout_error"
+        dtype: "float64"
+        description: "Average readout error of data qubits"
+      - name: "avg_ecr_error"
+        dtype: "float64"
+        description: "Average ECR gate error"
+        
+      # Probe results (if applicable)
+      - name: "probe_t1_us"
+        dtype: "float64"
+        description: "Probe-estimated T1 (microseconds)"
+        nullable: true
+      - name: "probe_t2_us"
+        dtype: "float64"
+        description: "Probe-estimated T2 (microseconds)"
+        nullable: true
+      - name: "probe_readout_error"
+        dtype: "float64"
+        description: "Probe-estimated readout error"
+        nullable: true
+        
+      # Outcomes
+      - name: "logical_errors"
+        dtype: "int64"
+        description: "Number of logical errors"
+      - name: "logical_error_rate"
+        dtype: "float64"
+        description: "Logical error rate (errors/shots)"
+      - name: "logical_error_rate_ci_lower"
+        dtype: "float64"
+        description: "95% CI lower bound"
+      - name: "logical_error_rate_ci_upper"
+        dtype: "float64"
+        description: "95% CI upper bound"
+        
+      # Syndrome statistics
+      - name: "syndrome_burst_count"
+        dtype: "int64"
+        description: "Number of detected syndrome bursts"
+      - name: "fano_factor"
+        dtype: "float64"
+        description: "Fano factor of syndrome events"
+      - name: "adjacent_correlation"
+        dtype: "float64"
+        description: "Correlation between adjacent syndromes"
+        
+      # Job metadata
+      - name: "job_id"
+        dtype: "string"
+        description: "IBM Quantum job ID"
+      - name: "job_duration_seconds"
+        dtype: "float64"
+        description: "Job execution duration"
+
+# =============================================================================
+# REPRODUCIBILITY REQUIREMENTS
+# =============================================================================
+reproducibility:
+  # Environment specification
+  environment_file: "requirements-lock.txt"
+  python_version: "3.10"
+  
+  # Random seeds
+  seeds:
+    numpy: 42
+    bootstrap: 42
+    circuit_random: 42
+    
+  # Version pinning
+  required_packages:
+    qiskit: ">=1.0.0"
+    qiskit_ibm_runtime: ">=0.20.0"
+    numpy: ">=1.24.0"
+    pandas: ">=2.0.0"
+    scipy: ">=1.11.0"
+    
+  # Code release
+  release_tag: "v1.0.0"
+  zenodo_doi: null  # Fill after deposit

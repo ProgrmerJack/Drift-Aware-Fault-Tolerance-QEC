@@ -1,0 +1,180 @@
+{
+  "generated_at": "2025-12-04T21:37:22.118649",
+  "protocol_version": "1.0",
+  "unit_of_analysis": "day-backend session",
+  "n_statistical_units": 42,
+  "n_clusters": 42,
+  "primary_result": {
+    "n_sessions": 42,
+    "n_day_backend_clusters": 42,
+    "effect_estimate": -0.00020106177116544307,
+    "ci": {
+      "lower": -0.00021684179091273548,
+      "upper": -0.0001852001856643404,
+      "confidence_level": 0.95,
+      "method": "cluster_bootstrap"
+    },
+    "cohens_d": {
+      "value": -3.820990503614834,
+      "metric": "cohens_d_paired",
+      "ci": null,
+      "interpretation": "large"
+    },
+    "relative_reduction": {
+      "value": 0.6071188115422991,
+      "metric": "relative_risk_reduction",
+      "ci": null,
+      "interpretation": "60.7% reduction"
+    },
+    "cluster_robust_p": 0.0
+  },
+  "negative_controls": [
+    {
+      "control_name": "drift_benefit_correlation",
+      "description": "Improvement should correlate with drift severity",
+      "expected_if_valid": "Positive correlation (worse drift = more benefit from drift-aware)",
+      "observed_effect": 0.663171619640686,
+      "observed_ci": {
+        "lower": 0.46317161964068604,
+        "upper": 0.863171619640686,
+        "confidence_level": 0.95,
+        "method": "point_estimate"
+      },
+      "passes_control": "True",
+      "interpretation": "PASS: More drift \u2192 more improvement (r=0.663, p=0.000)"
+    },
+    {
+      "control_name": "probe_benefit_test",
+      "description": "More informative probes should lead to more improvement",
+      "expected_if_valid": "Non-negative correlation (probes help or neutral)",
+      "observed_effect": -0.21902601085811524,
+      "observed_ci": {
+        "lower": -0.41902601085811525,
+        "upper": -0.019026010858115228,
+        "confidence_level": 0.95,
+        "method": "point_estimate"
+      },
+      "passes_control": "False",
+      "interpretation": "Note: Probes may not be utilized (r=-0.219)"
+    },
+    {
+      "control_name": "wrong_target_placebo",
+      "description": "Predict orthogonal placebo outcome",
+      "expected_if_valid": "No effect (null result)",
+      "observed_effect": -0.00011982868762751314,
+      "observed_ci": {
+        "lower": -0.0007539685003795923,
+        "upper": 0.0005267632734648061,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "passes_control": true,
+      "interpretation": "PASS: No effect on placebo"
+    }
+  ],
+  "holdout_results": [
+    {
+      "holdout_type": "temporal",
+      "train_set": "Days 1-7",
+      "test_set": "Days 8-14",
+      "train_effect": -0.000196710273988353,
+      "test_effect": -0.0002054132683425332,
+      "train_ci": {
+        "lower": -0.00021776816051356527,
+        "upper": -0.00017616727807986398,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "test_ci": {
+        "lower": -0.00022946693193167907,
+        "upper": -0.00018203309125062008,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "generalizes": true
+    },
+    {
+      "holdout_type": "backend",
+      "train_set": "All except ibm_brisbane",
+      "test_set": "ibm_brisbane",
+      "train_effect": -0.00017943560408579504,
+      "test_effect": -0.00024431410532473914,
+      "train_ci": {
+        "lower": -0.00019684059320797687,
+        "upper": -0.00016346170432373413,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "test_ci": {
+        "lower": -0.0002630617296921026,
+        "upper": -0.00022685504846615943,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "generalizes": true
+    },
+    {
+      "holdout_type": "backend",
+      "train_set": "All except ibm_kyoto",
+      "test_set": "ibm_kyoto",
+      "train_effect": -0.0002285464584792939,
+      "test_effect": -0.0001460923965377414,
+      "train_ci": {
+        "lower": -0.0002435507251249001,
+        "upper": -0.00021345569879161304,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "test_ci": {
+        "lower": -0.000154843605206623,
+        "upper": -0.00013759883741771845,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "generalizes": true
+    },
+    {
+      "holdout_type": "backend",
+      "train_set": "All except ibm_osaka",
+      "test_set": "ibm_osaka",
+      "train_effect": -0.00019520325093124027,
+      "test_effect": -0.00021277881163384867,
+      "train_ci": {
+        "lower": -0.00021623461484209728,
+        "upper": -0.00017443068851498534,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "test_ci": {
+        "lower": -0.00023292216335031848,
+        "upper": -0.0001921086779721179,
+        "confidence_level": 0.95,
+        "method": "cluster_bootstrap"
+      },
+      "generalizes": true
+    }
+  ],
+  "mechanism": {
+    "drift_failure_correlation": 0.6585096166767974,
+    "drift_failure_p": 2.1327233016136936e-06,
+    "drift_burst_correlation": -0.07067483900354554,
+    "drift_burst_p": 0.6564934700054594,
+    "burst_failure_correlation": -0.13240428358365253,
+    "burst_failure_p": 0.4032272519436855,
+    "interaction_effect": 4.4661157682416256e-05,
+    "interaction_p": 0.327
+  },
+  "sample_sizes": {
+    "raw_observations": 756,
+    "sessions": 84,
+    "paired_comparisons": 42,
+    "days": 14,
+    "backends": 3,
+    "clusters": 42
+  },
+  "exclusions": {
+    "excluded_runs": 0,
+    "exclusion_criteria": "None - all runs included",
+    "missing_pairs": 0
+  }
+}

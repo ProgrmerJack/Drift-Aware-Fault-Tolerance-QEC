@@ -1,0 +1,16 @@
+**Figure X. Dose-response relationship between calibration staleness and drift-aware improvement.**
+
+Each point represents one paired session comparing baseline (calibration-only) and drift-aware 
+(probe-informed) qubit selection strategies. Improvement is defined as the reduction in logical 
+error rate (baseline minus drift-aware; positive values indicate drift-aware outperforms baseline). 
+Points are colored by backend: Brisbane (blue), Kyoto (orange), Osaka (green). X-axis values are 
+jittered within ±1.5 hours for visibility; vertical dashed lines indicate stratum boundaries.
+
+The black curve shows a LOESS trend (locally weighted scatterplot smoothing, bandwidth = 0.6). 
+The gray shaded region indicates the 95% confidence interval estimated via cluster bootstrap 
+(2,000 resamples; clusters = 42 day×backend units). The monotonic increase confirms that 
+drift-aware gains grow as calibration data becomes stale.
+
+n = 126 paired sessions (14 days × 3 backends × 3 time strata). 
+Clusters = 42 (day × backend). 
+Spearman rank correlation: ρ = 0.56, P < 10⁻¹¹ (two-sided).

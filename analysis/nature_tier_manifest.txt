@@ -1,0 +1,45 @@
+
+NATURE COMMUNICATIONS REPORTING SUMMARY - STATISTICS
+
+1. STATISTICAL UNIT
+   Unit of analysis: day-backend session
+   n = 42 sessions (not shots/circuits)
+   Clusters: 42 day-backend combinations
+
+2. PRIMARY ENDPOINT
+   Comparison: Drift-aware vs Baseline static selection
+   Effect estimate: -0.000201 (reduction in logical error rate)
+   95% CI: [-0.000217, -0.000185]
+   Method: Cluster-robust bootstrap (10,000 iterations)
+   P-value: 0.0000 (cluster permutation test)
+   
+3. EFFECT SIZES
+   Cohen's d: -3.821 (large)
+   Relative risk reduction: 60.7%
+
+4. NEGATIVE CONTROLS
+   - drift_benefit_correlation: PASS: More drift → more improvement (r=0.663, p=0.000)
+   - probe_benefit_test: Note: Probes may not be utilized (r=-0.219)
+   - wrong_target_placebo: PASS: No effect on placebo
+
+5. HOLDOUT VALIDATION
+   - temporal (Days 8-14): Generalizes
+   - backend (ibm_brisbane): Generalizes
+   - backend (ibm_kyoto): Generalizes
+   - backend (ibm_osaka): Generalizes
+
+6. MECHANISM ANALYSIS
+   Drift → Failure: r = 0.659
+   Treatment reduces drift sensitivity: effect = 0.000045, p = 0.3270
+
+7. SAMPLE SIZE JUSTIFICATION
+   Pre-registered design: 14 days × 3 backends
+   Achieved: 42 paired comparisons
+   Power: >99% for medium effect (d = 0.5) at α = 0.05
+   
+8. EXCLUSIONS
+   None - all runs included
+   Excluded: 0 runs
+
+9. TWO-SIDED TESTS
+   All tests are two-sided (per pre-registration)

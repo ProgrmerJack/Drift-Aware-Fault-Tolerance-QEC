@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-12-15T17:08:46.408880",
+  "total_sessions": 1300,
+  "mean_improvement_pct": 81.3397061997342,
+  "median_improvement_pct": 85.32207021668353,
+  "std_improvement_pct": 11.839386348325057,
+  "sessions_improved": 1300,
+  "max_improvement_pct": 93.56471721638388,
+  "distance_scaling_mean": 82.27519186428604,
+  "platform_comparison_mean": 77.39187428643736,
+  "drift_robustness_mean": 82.89735163787907
+}

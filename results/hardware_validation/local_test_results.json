@@ -1,0 +1,14 @@
+{
+  "rep_code_d3": {
+    "error_rate": 0.0,
+    "shots": 1000
+  },
+  "probes": {
+    "success": true
+  },
+  "workflow": {
+    "baseline_mean": 0.0,
+    "drift_aware_mean": 0.0,
+    "improvement_pct": NaN
+  }
+}

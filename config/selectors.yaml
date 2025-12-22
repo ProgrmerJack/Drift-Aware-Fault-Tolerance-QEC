@@ -1,0 +1,181 @@
+# ============================================================================
+# Qubit Selection Strategies
+# ============================================================================
+# Defines the three-tier qubit selection strategy for drift-aware QEC.
+# This is the core innovation of the research: comparing selection methods.
+#
+# Tier 1: Static - Backend properties only (baseline)
+# Tier 2: Real-time - Add 30-shot probes before experiment
+# Tier 3: Drift-aware - Add historical drift analysis + change-point detection
+# ============================================================================
+
+# Static Selector (Baseline)
+# Uses only backend.properties() data - the standard approach
+static_selector:
+  name: "Static Selection"
+  description: "Select qubits using only published backend properties (T1, T2, errors)"
+  
+  # Scoring function weights
+  weights:
+    t1: 0.30                             # Higher T1 = better coherence
+    t2: 0.30                             # Higher T2 = better dephasing time
+    readout_error: 0.20                  # Lower = better measurement fidelity
+    gate_error_1q: 0.10                  # Lower = better single-qubit gates
+    gate_error_2q: 0.10                  # Lower = better two-qubit gates
+  
+  # Normalization method
+  normalization: "min_max"               # min_max | z_score | percentile
+  
+  # Score aggregation
+  score_aggregation: "weighted_sum"      # weighted_sum | geometric_mean
+  
+  # Chain constraints
+  require_connectivity: true             # Must form connected chain
+  prefer_linear: true                    # Prefer strictly linear topology
+
+# Real-time Selector (Tier 2)
+# Adds 30-shot probes immediately before experiment
+realtime_selector:
+  name: "Real-time Selection"
+  description: "Re-select qubits based on fresh 30-shot probe measurements"
+  
+  # Inherit static weights as base
+  inherit_from: "static_selector"
+  
+  # Override with probe data when available
+  probe_overrides:
+    # Replace backend T1 with probe T1 estimate
+    t1:
+      use_probe: true
+      fallback_to_backend: true          # Use backend if probe fails
+      min_probe_quality: 0.5             # Reject poor-quality probes
+    
+    # Replace backend readout with probe readout
+    readout_error:
+      use_probe: true
+      fallback_to_backend: true
+      min_probe_quality: 0.5
+    
+    # Use RB error rate if available
+    gate_error_1q:
+      use_probe: true
+      probe_source: "rb_1q"              # From randomized benchmarking
+      fallback_to_backend: true
+  
+  # Time decay for probe data
+  probe_freshness:
+    half_life_minutes: 30                # Probe value decays over time
+    max_age_minutes: 60                  # Reject probes older than this
+  
+  # Reselection threshold
+  reselect_if_delta: 0.1                 # Reselect if score changes >10%
+
+# Drift-Aware Selector (Tier 3 - Treatment)
+# Adds historical drift analysis and change-point detection
+drift_aware_selector:
+  name: "Drift-Aware Selection"
+  description: "Combine probes with drift analysis for robust qubit selection"
+  
+  # Inherit real-time selector configuration
+  inherit_from: "realtime_selector"
+  
+  # Additional drift-aware weights
+  additional_weights:
+    stability_score: 0.15                # Higher = more stable over time
+    zscore_penalty: -0.10                # Penalize recent outliers
+    change_point_penalty: -0.15          # Penalize recent change points
+  
+  # Drift features to consider
+  drift_features:
+    # Rolling z-score
+    zscore:
+      window_days: 7                     # Rolling window size
+      threshold_sigma: 2.0               # Flag if |z| > 2 sigma
+      penalty_per_sigma: 0.05            # Score penalty per sigma above threshold
+    
+    # Stability score (inverse coefficient of variation)
+    stability:
+      window_days: 14                    # Longer window for stability
+      min_snapshots: 5                   # Need at least 5 data points
+      bonus_threshold: 0.8               # Bonus if stability > 0.8
+      bonus_amount: 0.1                  # Score bonus for stable qubits
+    
+    # Change-point detection
+    change_points:
+      algorithm: "pelt"                  # pelt | binseg | window
+      penalty: "bic"                     # BIC penalty for model selection
+      min_segment_length: 3              # Minimum points between changes
+      recency_days: 3                    # Flag changes within N days
+      penalty_amount: 0.2                # Score penalty for recent change
+    
+    # Cross-qubit correlation (crosstalk proxy)
+    correlation:
+      enabled: true
+      threshold: 0.7                     # Flag if correlation > 0.7
+      penalty_amount: 0.1                # Penalty for correlated qubits
+
+# Correlation-Aware Selector (Extension)
+# Explicitly accounts for crosstalk between adjacent qubits
+correlation_aware_selector:
+  name: "Correlation-Aware Selection"
+  description: "Avoid qubit pairs with correlated drift (crosstalk proxy)"
+  
+  inherit_from: "drift_aware_selector"
+  
+  # Correlation analysis
+  correlation_analysis:
+    enabled: true
+    properties: ["T1", "T2"]             # Analyze correlation in these
+    method: "pearson"                    # pearson | spearman | kendall
+    window_days: 7                       # Rolling correlation window
+    
+    # Thresholds
+    high_correlation_threshold: 0.7      # Flag pairs with |r| > 0.7
+    chain_penalty: 0.2                   # Penalty for high-correlation edges
+    
+    # Avoidance strategy
+    avoid_strategy: "penalize"           # penalize | hard_exclude
+
+# Chain Selector (for Repetition Codes)
+# Specialization for finding optimal linear chains
+chain_selector:
+  name: "Repetition Code Chain Selector"
+  description: "Find optimal linear qubit chains for repetition codes"
+  
+  # Base selector to use for scoring individual qubits
+  qubit_scorer: "drift_aware_selector"
+  
+  # Chain requirements by distance
+  chain_requirements:
+    distance_3:
+      total_qubits: 5                    # 3 data + 2 ancilla
+      topology: "linear"
+    distance_5:
+      total_qubits: 9                    # 5 data + 4 ancilla
+      topology: "linear"
+    distance_7:
+      total_qubits: 13                   # 7 data + 6 ancilla
+      topology: "linear"
+  
+  # Chain scoring
+  chain_scoring:
+    # How to aggregate qubit scores into chain score
+    aggregation: "harmonic_mean"         # harmonic_mean | min | geometric_mean
+    
+    # Edge quality bonus/penalty
+    edge_weight: 0.3                     # Weight for edge quality in total score
+    
+    # Penalty for weak links
+    weak_link_penalty: true              # Apply extra penalty for worst qubit
+    weak_link_weight: 0.2                # Weight of weakest qubit penalty
+  
+  # Search strategy
+  search:
+    method: "exhaustive"                 # exhaustive | greedy | beam
+    beam_width: 10                       # For beam search
+    max_candidates: 100                  # Maximum chains to evaluate
+    
+  # Caching
+  cache:
+    enabled: true
+    cache_duration_minutes: 30           # Cache chain scores

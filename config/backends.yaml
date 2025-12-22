@@ -1,0 +1,90 @@
+# ============================================================================
+# IBM Quantum Backend Configuration
+# ============================================================================
+# Defines backend selection criteria, preferences, and constraints for
+# drift-aware QEC experiments on IBM Quantum Open Plan.
+#
+# Reference: https://quantum.cloud.ibm.com/docs/guides/plan-comparison
+# ============================================================================
+
+# QPU Time Budget (Open Plan constraints)
+budget:
+  total_seconds_per_month: 600           # ~10 minutes per 28-day rolling window
+  safety_margin_fraction: 0.10           # Reserve 10% for retries
+  max_job_duration_seconds: 180          # Max 3 minutes per job
+  min_headroom_seconds: 60               # Don't start job if <60s remaining
+
+# Preferred Backends (127+ qubit Eagle processors)
+# These support dynamic circuits and have good connectivity for QEC
+preferred_backends:
+  - ibm_brisbane      # Eagle r3, 127 qubits, Australia
+  - ibm_kyoto         # Eagle r3, 127 qubits, Japan
+  - ibm_osaka         # Eagle r3, 127 qubits, Japan
+  - ibm_sherbrooke    # Eagle r3, 127 qubits, Canada
+  - ibm_nazca         # Eagle r3, 127 qubits, South America
+
+# Fallback Backends (if preferred unavailable)
+fallback_backends:
+  - ibm_cleveland     # Eagle r1
+  - ibm_kawasaki      # Eagle r1
+
+# Backend Selection Criteria
+selection_criteria:
+  # Minimum requirements (reject if below)
+  min_qubits: 27                         # Need at least 27 for distance-7 chain
+  min_t1_us: 50                          # Minimum T1 (microseconds)
+  min_t2_us: 30                          # Minimum T2 (microseconds)
+  max_readout_error: 0.05                # Maximum readout error (5%)
+  max_2q_error: 0.02                     # Maximum 2-qubit gate error (2%)
+  
+  # Required features
+  requires_dynamic_circuits: true        # Must support mid-circuit measurement
+  requires_conditional_reset: true       # Must support reset operations
+  
+  # Operational status
+  require_operational: true              # Must be operational (not maintenance)
+  max_pending_jobs: 50                   # Skip if queue too long
+
+# Qubit Chain Selection for Repetition Codes
+chain_selection:
+  # Chain length requirements by distance
+  distance_3_chain_length: 5             # 3 data + 2 ancilla
+  distance_5_chain_length: 9             # 5 data + 4 ancilla
+  distance_7_chain_length: 13            # 7 data + 6 ancilla
+  distance_9_chain_length: 17            # 9 data + 8 ancilla (if supported)
+  
+  # Scoring weights for qubit selection
+  scoring_weights:
+    t1: 0.25                             # Higher T1 = better
+    t2: 0.25                             # Higher T2 = better
+    readout_error: 0.20                  # Lower readout = better
+    gate_error_1q: 0.10                  # Lower 1Q error = better
+    gate_error_2q: 0.15                  # Lower 2Q error = better (for edges)
+    stability_score: 0.05                # Higher stability = better (from drift)
+  
+  # Chain topology preferences
+  prefer_linear: true                    # Prefer strictly linear chains
+  avoid_crosstalk_neighbors: true        # Avoid qubits with high correlated drift
+  max_edge_error: 0.015                  # Skip chains with high-error edges
+
+# Calibration Tracking
+calibration:
+  snapshot_frequency_hours: 24           # Collect snapshots daily
+  drift_window_days: 7                   # Rolling window for drift analysis
+  change_point_threshold_sigma: 2.5      # Significance for change detection
+  stability_threshold: 0.8               # Stability score cutoff for "stable"
+
+# Job Configuration
+job_settings:
+  default_shots: 4096                    # Shots per circuit (power of 2)
+  max_circuits_per_job: 300              # Max circuits to batch
+  optimization_level: 1                  # Transpiler optimization (0-3)
+  resilience_level: 0                    # Error mitigation (0=none for QEC)
+  use_session: true                      # Use sessions for multiple jobs
+  session_max_time_minutes: 10           # Max session duration
+
+# Simulator Configuration (for development/testing)
+simulator:
+  name: "ibm_sherbrooke"                 # Fake backend to simulate
+  noise_model: true                      # Include realistic noise
+  seed: 42                               # Random seed for reproducibility

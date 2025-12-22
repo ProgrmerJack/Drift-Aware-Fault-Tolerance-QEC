@@ -1,0 +1,20 @@
+{
+  "linear_model": {
+    "slope": 857.800243401984,
+    "intercept": -96.03419411587598,
+    "r_squared": 0.5000264516817196,
+    "p_value": 1.1128188298693383e-11
+  },
+  "crossover_point": {
+    "baseline_ler": 0.11195402992077755,
+    "description": "LER threshold where DAQEC benefit changes sign"
+  },
+  "overhead_estimate": {
+    "fixed_overhead_pct": -15.355995750471198,
+    "source": "mean improvement in low-noise regime"
+  },
+  "model_performance": {
+    "rmse_pct": 12.865349952249312,
+    "mae_pct": 10.353905126552542
+  }
+}

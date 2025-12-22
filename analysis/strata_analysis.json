@@ -1,0 +1,63 @@
+{
+  "agreement_analysis": {
+    "n_sessions": 42,
+    "n_agreement": 0,
+    "n_disagreement": 42,
+    "p_agreement": 0.0,
+    "p_disagreement": 1.0,
+    "agreement_stratum": {
+      "n": 0,
+      "mean_improvement": 0,
+      "std_improvement": 0,
+      "mean_rel_improvement_pct": 0
+    },
+    "disagreement_stratum": {
+      "n": 42,
+      "mean_improvement": 0.00020106177116544307,
+      "std_improvement": 5.262032736674674e-05,
+      "mean_rel_improvement_pct": 59.87832460941033,
+      "cohens_d": 3.8673072310923287
+    }
+  },
+  "interaction_test": {
+    "agreement_mean": 0,
+    "disagreement_mean": 0.00020106177116544307,
+    "mannwhitney_U": NaN,
+    "mannwhitney_p": NaN,
+    "pointbiserial_r": NaN,
+    "pointbiserial_p": NaN,
+    "effect_ratio": Infinity
+  },
+  "time_since_calibration": {
+    "strata": {
+      "fresh_0_8h": {
+        "n": 42,
+        "mean_improvement": 0.0001423760149079864,
+        "std_improvement": 3.9637281648502365e-05,
+        "mean_rel_improvement_pct": 55.85114879508918,
+        "median_improvement": 0.00013712558147510446
+      },
+      "middle_8_16h": {
+        "n": 42,
+        "mean_improvement": 0.00018514355218474064,
+        "std_improvement": 6.368896188763457e-05,
+        "mean_rel_improvement_pct": 56.79747499141365,
+        "median_improvement": 0.00017909672060621208
+      },
+      "stale_16_24h": {
+        "n": 42,
+        "mean_improvement": 0.00027566574640360214,
+        "std_improvement": 0.00012568682257428043,
+        "mean_rel_improvement_pct": 62.3435292062611,
+        "median_improvement": 0.00025351671597334015
+      }
+    },
+    "trend_test": {
+      "spearman_rho": 0.558808332409458,
+      "spearman_p": 1.0467478047328769e-11,
+      "interpretation": "Improvement increases with time since calibration"
+    }
+  },
+  "timestamp": "2025-12-05T16:12:20.668662",
+  "methodology_note": "Agreement defined as |relative improvement| < 10% OR |absolute improvement| < 0.00005. This threshold reflects the expected noise floor when both strategies select identical qubit chains. Disagreement sessions show the conditional benefit of drift-aware selection."
+}

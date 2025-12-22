@@ -1,0 +1,11 @@
+{
+  "baseline_error_rate": 0.001,
+  "drift_aware_error_rate": 0.001,
+  "absolute_improvement": 0.0,
+  "relative_improvement_pct": 0.0,
+  "baseline_backend": "ibm_fez",
+  "drift_aware_backend": "ibm_fez",
+  "baseline_timestamp": "2025-12-04T17:18:12.282664+00:00",
+  "drift_aware_timestamp": "2025-12-04T17:20:28.380237+00:00",
+  "manuscript_claim_validated": false
+}

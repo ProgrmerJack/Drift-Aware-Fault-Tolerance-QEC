@@ -1,0 +1,462 @@
+{
+  "robust_effects": {
+    "hodges_lehmann": -0.00019908136372153747,
+    "cliff_delta": -1.0,
+    "paired_win_rate": 1.0,
+    "median_difference": -0.00021034703671108908,
+    "hl_ci_lower": -0.00021795341325262174,
+    "hl_ci_upper": -0.00018298011919770364,
+    "cliff_ci_lower": -1.0,
+    "cliff_ci_upper": -1.0,
+    "cliff_interpretation": "large",
+    "effect_direction": "reduction"
+  },
+  "fairness_table": [
+    {
+      "aspect": "Code distances tested",
+      "baseline_value": "[np.int64(3), np.int64(5), np.int64(7)]",
+      "drift_aware_value": "[np.int64(3), np.int64(5), np.int64(7)]",
+      "is_identical": true,
+      "notes": "Same distances for both strategies"
+    },
+    {
+      "aspect": "Syndrome rounds per distance",
+      "baseline_value": "{3: 3, 5: 5, 7: 7}",
+      "drift_aware_value": "{3: 3, 5: 5, 7: 7}",
+      "is_identical": true,
+      "notes": "Identical circuit depth"
+    },
+    {
+      "aspect": "Shots per configuration",
+      "baseline_value": "[np.int64(4096)]",
+      "drift_aware_value": "[np.int64(4096)]",
+      "is_identical": true,
+      "notes": "Equal statistical power"
+    },
+    {
+      "aspect": "IBM backends used",
+      "baseline_value": "['ibm_brisbane', 'ibm_kyoto', 'ibm_osaka']",
+      "drift_aware_value": "['ibm_brisbane', 'ibm_kyoto', 'ibm_osaka']",
+      "is_identical": true,
+      "notes": "Same hardware for both"
+    },
+    {
+      "aspect": "Session scheduling",
+      "baseline_value": "Paired with drift-aware",
+      "drift_aware_value": "Paired with baseline",
+      "is_identical": true,
+      "notes": "Same day, same backend, same session"
+    },
+    {
+      "aspect": "Transpilation level",
+      "baseline_value": "optimization_level=3",
+      "drift_aware_value": "optimization_level=3",
+      "is_identical": true,
+      "notes": "Qiskit default optimization"
+    },
+    {
+      "aspect": "Qubit selection method",
+      "baseline_value": "24h calibration data only",
+      "drift_aware_value": "30-shot probe refresh",
+      "is_identical": false,
+      "notes": "THIS IS THE TREATMENT"
+    },
+    {
+      "aspect": "Decoder priors",
+      "baseline_value": "Fixed (calibration)",
+      "drift_aware_value": "Adaptive (probe data)",
+      "is_identical": false,
+      "notes": "THIS IS THE TREATMENT"
+    }
+  ],
+  "exclusions_table": [
+    {
+      "criterion": "Backend downtime / queue failure",
+      "n_excluded": 0,
+      "percentage": 0.0,
+      "reason": "Circuit did not execute",
+      "pre_registered": true
+    },
+    {
+      "criterion": "Calibration data >24h old",
+      "n_excluded": 0,
+      "percentage": 0.0,
+      "reason": "Stale calibration violates protocol",
+      "pre_registered": true
+    },
+    {
+      "criterion": "Probe circuit failure",
+      "n_excluded": 0,
+      "percentage": 0.0,
+      "reason": "Could not estimate qubit quality",
+      "pre_registered": true
+    },
+    {
+      "criterion": "Post-hoc outlier removal",
+      "n_excluded": 0,
+      "percentage": 0.0,
+      "reason": "N/A - not performed",
+      "pre_registered": true
+    },
+    {
+      "criterion": "TOTAL EXCLUDED",
+      "n_excluded": 0,
+      "percentage": 0.0,
+      "reason": "From 756 total runs",
+      "pre_registered": true
+    }
+  ],
+  "multiverse": [
+    {
+      "specification": "main",
+      "description": "Session-level, cluster bootstrap",
+      "effect_estimate": -0.00020106177116544307,
+      "ci_lower": -0.00021684179091273548,
+      "ci_upper": -0.0001852001856643404,
+      "effect_sign": "negative",
+      "consistent_with_main": true
+    },
+    {
+      "specification": "median_aggregation",
+      "description": "Session median (not mean)",
+      "effect_estimate": -1.652696543291316e-06,
+      "ci_lower": -4.117257656901815e-06,
+      "ci_upper": -3.054874344712679e-08,
+      "effect_sign": "negative",
+      "consistent_with_main": "True"
+    },
+    {
+      "specification": "distance_3_only",
+      "description": "Only d=3 codes",
+      "effect_estimate": -0.0005932103744830335,
+      "ci_lower": -0.0006399006354459414,
+      "ci_upper": -0.0005464838779303396,
+      "effect_sign": "negative",
+      "consistent_with_main": "True"
+    },
+    {
+      "specification": "distance_7_only",
+      "description": "Only d=7 codes",
+      "effect_estimate": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "effect_sign": "positive",
+      "consistent_with_main": "False"
+    },
+    {
+      "specification": "first_half_days",
+      "description": "Days 1-7 only",
+      "effect_estimate": -0.000196710273988353,
+      "ci_lower": -0.00021776816051356527,
+      "ci_upper": -0.00017616727807986398,
+      "effect_sign": "negative",
+      "consistent_with_main": "True"
+    },
+    {
+      "specification": "winsorized_95",
+      "description": "Winsorized at 95th percentile",
+      "effect_estimate": -0.00018641338575359163,
+      "ci_lower": -0.00019720834762902188,
+      "ci_upper": -0.00017543542125068087,
+      "effect_sign": "negative",
+      "consistent_with_main": "True"
+    }
+  ],
+  "paired_session_data": [
+    {
+      "day": 1,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0003387753109143221,
+      "treatment_error": 0.00012386398111720304,
+      "difference": -0.00021491132979711906
+    },
+    {
+      "day": 1,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00027701466811008946,
+      "treatment_error": 0.00012789043451750986,
+      "difference": -0.0001491242335925796
+    },
+    {
+      "day": 1,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.00034160503613078015,
+      "treatment_error": 0.00011746030678972037,
+      "difference": -0.00022414472934105978
+    },
+    {
+      "day": 2,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.000385372184020249,
+      "treatment_error": 0.00014111682307437729,
+      "difference": -0.0002442553609458717
+    },
+    {
+      "day": 2,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.0002691777540644219,
+      "treatment_error": 0.00011910670457199167,
+      "difference": -0.00015007104949243022
+    },
+    {
+      "day": 2,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0003364470891089996,
+      "treatment_error": 0.000147844178730333,
+      "difference": -0.0001886029103786666
+    },
+    {
+      "day": 3,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.00040327544542091026,
+      "treatment_error": 0.000128490791492927,
+      "difference": -0.00027478465392798325
+    },
+    {
+      "day": 3,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.0002895125902222159,
+      "treatment_error": 0.00012333742538066106,
+      "difference": -0.00016617516484155484
+    },
+    {
+      "day": 3,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0002781857704595989,
+      "treatment_error": 0.00013566680079388682,
+      "difference": -0.0001425189696657121
+    },
+    {
+      "day": 4,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.00037888149223306585,
+      "treatment_error": 0.00013434190686330036,
+      "difference": -0.00024453958536976546
+    },
+    {
+      "day": 4,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00023242761368104766,
+      "treatment_error": 0.00010588085570161269,
+      "difference": -0.00012654675797943497
+    },
+    {
+      "day": 4,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0003452135894229774,
+      "treatment_error": 0.00013278249847624142,
+      "difference": -0.000212431090946736
+    },
+    {
+      "day": 5,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.00032054177864577685,
+      "treatment_error": 0.00013063403290407735,
+      "difference": -0.0001899077457416995
+    },
+    {
+      "day": 5,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00029259910373857946,
+      "treatment_error": 0.00011137977647623631,
+      "difference": -0.00018121932726234313
+    },
+    {
+      "day": 5,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.00038524325824183786,
+      "treatment_error": 0.0001294342923020936,
+      "difference": -0.00025580896593974426
+    },
+    {
+      "day": 6,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0003414430400277335,
+      "treatment_error": 0.00012104382960248685,
+      "difference": -0.00022039921042524665
+    },
+    {
+      "day": 6,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00024485342208412097,
+      "treatment_error": 0.0001188378072078229,
+      "difference": -0.0001260156148762981
+    },
+    {
+      "day": 6,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0002985002853914602,
+      "treatment_error": 0.0001461577216029326,
+      "difference": -0.00015234256378852758
+    },
+    {
+      "day": 7,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0003952191579647267,
+      "treatment_error": 0.00013982267006136583,
+      "difference": -0.00025539648790336085
+    },
+    {
+      "day": 7,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00025901290776480997,
+      "treatment_error": 0.00011761249964671002,
+      "difference": -0.00014140040811809994
+    },
+    {
+      "day": 7,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.00040228984461404197,
+      "treatment_error": 0.0001319702511928625,
+      "difference": -0.0002703195934211795
+    },
+    {
+      "day": 8,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.00046779122227063225,
+      "treatment_error": 0.0001465015563295135,
+      "difference": -0.00032128966594111876
+    },
+    {
+      "day": 8,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00025629221497746533,
+      "treatment_error": 0.00011595687880547593,
+      "difference": -0.0001403353361719894
+    },
+    {
+      "day": 8,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0003909290250257928,
+      "treatment_error": 0.0001456358017764268,
+      "difference": -0.000245293223249366
+    },
+    {
+      "day": 9,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0003594857464405405,
+      "treatment_error": 0.00014189783749625278,
+      "difference": -0.00021758790894428772
+    },
+    {
+      "day": 9,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00023675769765398415,
+      "treatment_error": 0.00012214374600065493,
+      "difference": -0.00011461395165332923
+    },
+    {
+      "day": 9,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0002973525653511444,
+      "treatment_error": 0.00012166968455885181,
+      "difference": -0.0001756828807922926
+    },
+    {
+      "day": 10,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0003842477462144454,
+      "treatment_error": 0.0001344660527448513,
+      "difference": -0.00024978169346959406
+    },
+    {
+      "day": 10,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.0002672860528075215,
+      "treatment_error": 0.00012584629180927855,
+      "difference": -0.00014143976099824292
+    },
+    {
+      "day": 10,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.000363017470055669,
+      "treatment_error": 0.000137342246263583,
+      "difference": -0.00022567522379208601
+    },
+    {
+      "day": 11,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0004070923958170537,
+      "treatment_error": 0.00014649815128203194,
+      "difference": -0.00026059424453502174
+    },
+    {
+      "day": 11,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00026349228902844873,
+      "treatment_error": 0.00011712080753657674,
+      "difference": -0.000146371481491872
+    },
+    {
+      "day": 11,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.0002987062872828726,
+      "treatment_error": 0.00012493049327973302,
+      "difference": -0.00017377579400313959
+    },
+    {
+      "day": 12,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.00036467501700145587,
+      "treatment_error": 0.0001564120345260137,
+      "difference": -0.00020826298247544217
+    },
+    {
+      "day": 12,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00027772471323740905,
+      "treatment_error": 0.00011172333642199046,
+      "difference": -0.0001660013768154186
+    },
+    {
+      "day": 12,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.00041679972012047413,
+      "treatment_error": 0.00014676912290962247,
+      "difference": -0.00027003059721085167
+    },
+    {
+      "day": 13,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0003522179285554991,
+      "treatment_error": 0.00013181070928644268,
+      "difference": -0.0002204072192690564
+    },
+    {
+      "day": 13,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00026723605891222537,
+      "treatment_error": 0.00011932732216826151,
+      "difference": -0.00014790873674396386
+    },
+    {
+      "day": 13,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.000336312723121196,
+      "treatment_error": 0.0001184228362166115,
+      "difference": -0.00021788988690458452
+    },
+    {
+      "day": 14,
+      "backend": "ibm_brisbane",
+      "baseline_error": 0.0004455415080895582,
+      "treatment_error": 0.00014726212228877728,
+      "difference": -0.0002982793858007809
+    },
+    {
+      "day": 14,
+      "backend": "ibm_kyoto",
+      "baseline_error": 0.00027812479746682845,
+      "treatment_error": 0.00013005444597600572,
+      "difference": -0.00014807035149082273
+    },
+    {
+      "day": 14,
+      "backend": "ibm_osaka",
+      "baseline_error": 0.00036262004866784067,
+      "treatment_error": 0.00013823311522790535,
+      "difference": -0.00022438693343993532
+    }
+  ],
+  "timestamp": "2025-12-04T21:54:28.488410"
+}

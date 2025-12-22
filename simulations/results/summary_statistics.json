@@ -1,0 +1,44 @@
+{
+  "distance_scaling": {
+    "n_sessions": 600,
+    "mean_improvement_pct": 4.436260386152174,
+    "median_improvement_pct": 3.4993650919182535,
+    "std_improvement_pct": 4.382295120415371,
+    "mean_ler_baseline": 0.24106922402744574,
+    "mean_ler_daqec": 0.2294522892033518,
+    "sessions_improved": 575,
+    "sessions_degraded": 5,
+    "max_improvement_pct": 35.948047510234474,
+    "timestamp": "2025-12-15T13:12:08.298382",
+    "spearman_rho": 0.6570440235575017,
+    "spearman_p": 2.0512564656278053e-75
+  },
+  "platform_comparison": {
+    "n_sessions": 300,
+    "mean_improvement_pct": -7.200629765285498,
+    "median_improvement_pct": -6.837451869802679,
+    "std_improvement_pct": 3.7468849981778045,
+    "mean_ler_baseline": 0.2651595395094289,
+    "mean_ler_daqec": 0.28387278938949456,
+    "sessions_improved": 0,
+    "sessions_degraded": 300,
+    "max_improvement_pct": -0.8014686758864416,
+    "timestamp": "2025-12-15T13:12:08.301166",
+    "spearman_rho": -0.11156612851253901,
+    "spearman_p": 0.053564061922491045
+  },
+  "drift_model_robustness": {
+    "n_sessions": 400,
+    "mean_improvement_pct": -6.9657115806480325,
+    "median_improvement_pct": -6.634491801235759,
+    "std_improvement_pct": 3.5495106825521217,
+    "mean_ler_baseline": 0.22648132437297747,
+    "mean_ler_daqec": 0.24240836119054276,
+    "sessions_improved": 0,
+    "sessions_degraded": 400,
+    "max_improvement_pct": -0.7698522530681599,
+    "timestamp": "2025-12-15T13:12:08.302356",
+    "spearman_rho": -0.3853599726719397,
+    "spearman_p": 1.3072322893870321e-15
+  }
+}

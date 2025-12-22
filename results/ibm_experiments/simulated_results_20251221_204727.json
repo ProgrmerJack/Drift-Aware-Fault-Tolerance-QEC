@@ -1,0 +1,726 @@
+{
+  "mode": "simulated",
+  "start_time": "2025-12-21T20:47:27.140708",
+  "surface_code_results": [
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "+",
+      "repetition": 0,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1875,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "+",
+      "repetition": 0,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1294,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "+",
+      "repetition": 1,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.2232,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "+",
+      "repetition": 1,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1383,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "+",
+      "repetition": 2,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1656,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "+",
+      "repetition": 2,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.088,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "0",
+      "repetition": 0,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1558,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "0",
+      "repetition": 0,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1049,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "0",
+      "repetition": 1,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.2101,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "0",
+      "repetition": 1,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1348,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "0",
+      "repetition": 2,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1521,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_brisbane",
+      "logical_state": "0",
+      "repetition": 2,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1055,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "+",
+      "repetition": 0,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.2332,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "+",
+      "repetition": 0,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1265,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "+",
+      "repetition": 1,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1682,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "+",
+      "repetition": 1,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.0903,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "+",
+      "repetition": 2,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1804,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "+",
+      "repetition": 2,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1091,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "0",
+      "repetition": 0,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1932,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "0",
+      "repetition": 0,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1079,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "0",
+      "repetition": 1,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.2112,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "0",
+      "repetition": 1,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1115,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "0",
+      "repetition": 2,
+      "selection_method": "static",
+      "shots": 4096,
+      "logical_error_rate": 0.1792,
+      "circuit_depth": 127,
+      "n_gates": 342
+    },
+    {
+      "backend": "ibm_kyoto",
+      "logical_state": "0",
+      "repetition": 2,
+      "selection_method": "daqec",
+      "shots": 4096,
+      "logical_error_rate": 0.1027,
+      "circuit_depth": 127,
+      "n_gates": 342
+    }
+  ],
+  "deployment_results": [
+    {
+      "day": 1,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.1119,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2015,
+      "99th_percentile_ler": 0.2798
+    },
+    {
+      "day": 1,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.1395,
+      "shots": 4096,
+      "95th_percentile_ler": 0.251,
+      "99th_percentile_ler": 0.3487
+    },
+    {
+      "day": 1,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.1002,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1804,
+      "99th_percentile_ler": 0.2506
+    },
+    {
+      "day": 2,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.116,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2088,
+      "99th_percentile_ler": 0.29
+    },
+    {
+      "day": 2,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.1255,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2259,
+      "99th_percentile_ler": 0.3138
+    },
+    {
+      "day": 2,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0888,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1598,
+      "99th_percentile_ler": 0.222
+    },
+    {
+      "day": 3,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.1225,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2206,
+      "99th_percentile_ler": 0.3063
+    },
+    {
+      "day": 3,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.095,
+      "shots": 4096,
+      "95th_percentile_ler": 0.171,
+      "99th_percentile_ler": 0.2375
+    },
+    {
+      "day": 3,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0902,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1623,
+      "99th_percentile_ler": 0.2255
+    },
+    {
+      "day": 4,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.1464,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2636,
+      "99th_percentile_ler": 0.3661
+    },
+    {
+      "day": 4,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.1525,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2745,
+      "99th_percentile_ler": 0.3813
+    },
+    {
+      "day": 4,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.1457,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2622,
+      "99th_percentile_ler": 0.3642
+    },
+    {
+      "day": 5,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.1013,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1824,
+      "99th_percentile_ler": 0.2533
+    },
+    {
+      "day": 5,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0897,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1615,
+      "99th_percentile_ler": 0.2243
+    },
+    {
+      "day": 5,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.1364,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2456,
+      "99th_percentile_ler": 0.3411
+    },
+    {
+      "day": 6,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.1108,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1995,
+      "99th_percentile_ler": 0.277
+    },
+    {
+      "day": 6,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0915,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1647,
+      "99th_percentile_ler": 0.2287
+    },
+    {
+      "day": 6,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.1223,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2202,
+      "99th_percentile_ler": 0.3058
+    },
+    {
+      "day": 7,
+      "session": 0,
+      "session_type": "baseline",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.0824,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1483,
+      "99th_percentile_ler": 0.206
+    },
+    {
+      "day": 7,
+      "session": 1,
+      "session_type": "baseline",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.1484,
+      "shots": 4096,
+      "95th_percentile_ler": 0.2672,
+      "99th_percentile_ler": 0.3711
+    },
+    {
+      "day": 7,
+      "session": 2,
+      "session_type": "baseline",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.1047,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1884,
+      "99th_percentile_ler": 0.2616
+    },
+    {
+      "day": 8,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.0711,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0924,
+      "99th_percentile_ler": 0.1137,
+      "probe_time_seconds": 2.32,
+      "policy_triggered": false
+    },
+    {
+      "day": 8,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0651,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0847,
+      "99th_percentile_ler": 0.1042,
+      "probe_time_seconds": 2.58,
+      "policy_triggered": false
+    },
+    {
+      "day": 8,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0901,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1172,
+      "99th_percentile_ler": 0.1442,
+      "probe_time_seconds": 2.72,
+      "policy_triggered": true
+    },
+    {
+      "day": 9,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.0477,
+      "shots": 4096,
+      "95th_percentile_ler": 0.062,
+      "99th_percentile_ler": 0.0763,
+      "probe_time_seconds": 2.13,
+      "policy_triggered": true
+    },
+    {
+      "day": 9,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0666,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0865,
+      "99th_percentile_ler": 0.1065,
+      "probe_time_seconds": 2.16,
+      "policy_triggered": true
+    },
+    {
+      "day": 9,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0636,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0826,
+      "99th_percentile_ler": 0.1017,
+      "probe_time_seconds": 2.6,
+      "policy_triggered": true
+    },
+    {
+      "day": 10,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.0976,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1268,
+      "99th_percentile_ler": 0.1561,
+      "probe_time_seconds": 2.0,
+      "policy_triggered": true
+    },
+    {
+      "day": 10,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0888,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1154,
+      "99th_percentile_ler": 0.1421,
+      "probe_time_seconds": 2.53,
+      "policy_triggered": false
+    },
+    {
+      "day": 10,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0497,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0646,
+      "99th_percentile_ler": 0.0795,
+      "probe_time_seconds": 1.92,
+      "policy_triggered": false
+    },
+    {
+      "day": 11,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.07,
+      "shots": 4096,
+      "95th_percentile_ler": 0.091,
+      "99th_percentile_ler": 0.112,
+      "probe_time_seconds": 1.86,
+      "policy_triggered": true
+    },
+    {
+      "day": 11,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.067,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0872,
+      "99th_percentile_ler": 0.1073,
+      "probe_time_seconds": 2.44,
+      "policy_triggered": false
+    },
+    {
+      "day": 11,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0604,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0785,
+      "99th_percentile_ler": 0.0967,
+      "probe_time_seconds": 2.51,
+      "policy_triggered": false
+    },
+    {
+      "day": 12,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.078,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1014,
+      "99th_percentile_ler": 0.1249,
+      "probe_time_seconds": 2.29,
+      "policy_triggered": false
+    },
+    {
+      "day": 12,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0561,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0729,
+      "99th_percentile_ler": 0.0897,
+      "probe_time_seconds": 1.91,
+      "policy_triggered": true
+    },
+    {
+      "day": 12,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0715,
+      "shots": 4096,
+      "95th_percentile_ler": 0.093,
+      "99th_percentile_ler": 0.1144,
+      "probe_time_seconds": 2.31,
+      "policy_triggered": false
+    },
+    {
+      "day": 13,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.0567,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0737,
+      "99th_percentile_ler": 0.0908,
+      "probe_time_seconds": 2.56,
+      "policy_triggered": true
+    },
+    {
+      "day": 13,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0481,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0626,
+      "99th_percentile_ler": 0.077,
+      "probe_time_seconds": 1.96,
+      "policy_triggered": false
+    },
+    {
+      "day": 13,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0873,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1135,
+      "99th_percentile_ler": 0.1397,
+      "probe_time_seconds": 2.67,
+      "policy_triggered": false
+    },
+    {
+      "day": 14,
+      "session": 0,
+      "session_type": "daqec",
+      "hours_post_calibration": 0,
+      "logical_error_rate": 0.0631,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0821,
+      "99th_percentile_ler": 0.101,
+      "probe_time_seconds": 2.34,
+      "policy_triggered": false
+    },
+    {
+      "day": 14,
+      "session": 1,
+      "session_type": "daqec",
+      "hours_post_calibration": 8,
+      "logical_error_rate": 0.0812,
+      "shots": 4096,
+      "95th_percentile_ler": 0.1056,
+      "99th_percentile_ler": 0.13,
+      "probe_time_seconds": 1.91,
+      "policy_triggered": true
+    },
+    {
+      "day": 14,
+      "session": 2,
+      "session_type": "daqec",
+      "hours_post_calibration": 16,
+      "logical_error_rate": 0.0744,
+      "shots": 4096,
+      "95th_percentile_ler": 0.0967,
+      "99th_percentile_ler": 0.119,
+      "probe_time_seconds": 2.66,
+      "policy_triggered": true
+    }
+  ],
+  "note": "Simulated results based on expected distributions from prior experiments",
+  "end_time": "2025-12-21T20:47:27.146370",
+  "summary": {
+    "surface_code": {
+      "static_mean": 0.1883,
+      "daqec_mean": 0.1124,
+      "improvement_percent": 40.3
+    },
+    "deployment": {
+      "baseline_mean": 0.1153,
+      "daqec_mean": 0.0692,
+      "improvement_percent": 40.0,
+      "tail_compression_95th": 56.6,
+      "policy_trigger_rate": 47.6
+    }
+  }
+}

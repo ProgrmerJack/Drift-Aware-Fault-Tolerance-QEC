@@ -1,0 +1,40 @@
+{
+  "total_jobs": 48,
+  "surface_code": {
+    "n": 18,
+    "mean_ler": 0.6220431666666666,
+    "std_ler": 0.12682315663213437,
+    "median_ler": 0.576416,
+    "min_ler": 0.491699,
+    "max_ler": 0.832031
+  },
+  "deployment": {
+    "baseline": {
+      "n": 15,
+      "mean_ler": 0.0834636,
+      "std_ler": 0.010301479258177763,
+      "ci_95": [
+        0.07755860301740831,
+        0.08936859698259168
+      ]
+    },
+    "daqec": {
+      "n": 15,
+      "mean_ler": 0.08142893333333333,
+      "std_ler": 0.00828876503440383,
+      "ci_95": [
+        0.07667766108486364,
+        0.08618020558180302
+      ]
+    },
+    "statistics": {
+      "t_statistic": 0.5757800811951147,
+      "p_value": 0.5693630673166459,
+      "cohens_d": 0.2176244149581216,
+      "effect_interpretation": "small",
+      "relative_improvement_percent": 2.4377892478477694,
+      "significant_at_0_05": false,
+      "statistical_power": 0.12327012056750722
+    }
+  }
+}

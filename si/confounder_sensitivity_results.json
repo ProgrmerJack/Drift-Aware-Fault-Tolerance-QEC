@@ -1,0 +1,60 @@
+{
+  "within_cluster": {
+    "n_clusters": 42,
+    "n_positive": 40,
+    "pct_positive": 95.2,
+    "mean_within_cluster_rho": 0.655,
+    "se_rho": 0.063,
+    "sign_test_p": 2.0554580260068178e-10
+  },
+  "mixed_effects": {
+    "time_coefficient": 1.7e-05,
+    "time_se": 2e-06,
+    "time_p_value": 2.1817459872490588e-13,
+    "intercept": 0.000101,
+    "icc": 0.062,
+    "random_effect_var": 0.0,
+    "residual_var": 1e-08,
+    "converged": true
+  },
+  "stratified": {
+    "backends": [
+      {
+        "backend": "ibm_brisbane",
+        "n": 42,
+        "spearman_rho": 0.664,
+        "spearman_p": 1.635074700128101e-06,
+        "linear_slope": 2.2e-05,
+        "linear_p": 1.0767966058330012e-05,
+        "positive": "True"
+      },
+      {
+        "backend": "ibm_kyoto",
+        "n": 42,
+        "spearman_rho": 0.592,
+        "spearman_p": 3.658359828064535e-05,
+        "linear_slope": 9e-06,
+        "linear_p": 6.560271969139648e-05,
+        "positive": "True"
+      },
+      {
+        "backend": "ibm_osaka",
+        "n": 42,
+        "spearman_rho": 0.645,
+        "spearman_p": 4.05351795983403e-06,
+        "linear_slope": 1.9e-05,
+        "linear_p": 7.439257471956035e-06,
+        "positive": "True"
+      }
+    ],
+    "all_backends_positive": true
+  },
+  "permutation": {
+    "observed_rho": 0.559,
+    "null_mean": -0.0002,
+    "null_std": 0.09,
+    "z_score": 6.21,
+    "permutation_p": 0.0,
+    "n_permutations": 10000
+  }
+}

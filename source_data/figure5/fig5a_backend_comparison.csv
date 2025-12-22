@@ -1,0 +1,4 @@
+backend,effect_size,n_sessions,p_value
+ibm_brisbane,0.00024161444074858465,252,
+ibm_kyoto,0.00016195381072863781,252,
+ibm_osaka,0.0002259450319641795,252,

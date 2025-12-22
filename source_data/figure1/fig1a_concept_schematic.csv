@@ -1,0 +1,6 @@
+component,typical_error_rate,description
+probe_t1,0.01,T1 decay characterization
+probe_t2,0.02,T2 dephasing characterization
+probe_readout,0.03,Readout error measurement
+qec_syndrome,0.05,Syndrome extraction
+decoding,0.02,MWPM decoding
