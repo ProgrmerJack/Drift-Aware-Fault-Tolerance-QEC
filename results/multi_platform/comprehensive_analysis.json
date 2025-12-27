@@ -1,0 +1,247 @@
+{
+  "generated": "2025-12-28T00:15:00.135883",
+  "total_experiments": 12,
+  "platform_analysis": {
+    "Amazon Braket": {
+      "total_experiments": 3,
+      "backends": [
+        "LocalSimulator"
+      ],
+      "hardware_type": "simulator",
+      "distances_tested": [
+        3,
+        5
+      ],
+      "avg_ler": 0.0,
+      "min_ler": 0.0,
+      "max_ler": 0.0,
+      "total_shots": 300,
+      "is_real_hardware": false
+    },
+    "IBM Quantum": {
+      "total_experiments": 6,
+      "backends": [
+        "ibm_torino",
+        "ibm_fez"
+      ],
+      "hardware_type": "superconducting",
+      "distances_tested": [
+        3,
+        5
+      ],
+      "avg_ler": 0.001,
+      "min_ler": 0.0,
+      "max_ler": 0.003,
+      "total_shots": 6000,
+      "is_real_hardware": true
+    },
+    "IonQ": {
+      "total_experiments": 3,
+      "backends": [
+        "ionq_simulator"
+      ],
+      "hardware_type": "trapped-ion",
+      "distances_tested": [
+        3,
+        5,
+        7
+      ],
+      "avg_ler": 0.0,
+      "min_ler": 0.0,
+      "max_ler": 0.0,
+      "total_shots": 400,
+      "is_real_hardware": false
+    }
+  },
+  "comparison": {
+    "drift_aware": {
+      "count": 3,
+      "avg_ler": 0.0,
+      "avg_depth": 56,
+      "avg_correct": 967.3333333333334
+    },
+    "calibration_based": {
+      "count": 3,
+      "avg_ler": 0.002,
+      "avg_depth": 121.33333333333333,
+      "avg_correct": 727.3333333333334
+    },
+    "improvement": {
+      "ler_reduction_pct": 100.0,
+      "depth_reduction_pct": 53.84615384615385
+    }
+  },
+  "results": [
+    {
+      "file": "braket_local_sim_d5_20251227_235536.json",
+      "timestamp": "2025-12-27T23:55:36.362553",
+      "platform": "Amazon Braket",
+      "backend": "LocalSimulator",
+      "hardware_type": "simulator",
+      "is_real_hardware": false,
+      "selection_method": "N/A",
+      "code_distance": 5,
+      "shots": 100,
+      "ler": 0.0,
+      "circuit_depth": 13,
+      "correct_count": 100
+    },
+    {
+      "file": "braket_simulator_d3_20251228_001028.json",
+      "timestamp": "2025-12-28T00:10:28.706710",
+      "platform": "Amazon Braket",
+      "backend": "LocalSimulator",
+      "hardware_type": "simulator",
+      "is_real_hardware": false,
+      "selection_method": "N/A",
+      "code_distance": 3,
+      "shots": 100,
+      "ler": 0.0,
+      "circuit_depth": 5,
+      "correct_count": 100
+    },
+    {
+      "file": "braket_simulator_d5_20251228_001039.json",
+      "timestamp": "2025-12-28T00:10:39.703470",
+      "platform": "Amazon Braket",
+      "backend": "LocalSimulator",
+      "hardware_type": "simulator",
+      "is_real_hardware": false,
+      "selection_method": "N/A",
+      "code_distance": 5,
+      "shots": 100,
+      "ler": 0.0,
+      "circuit_depth": 9,
+      "correct_count": 100
+    },
+    {
+      "file": "ibm_calibration_based_d3_20251227_233950.json",
+      "timestamp": "2025-12-27T23:39:50.726915",
+      "platform": "IBM Quantum",
+      "backend": "ibm_fez",
+      "hardware_type": "superconducting",
+      "is_real_hardware": true,
+      "selection_method": "calibration_based",
+      "code_distance": 3,
+      "shots": 1000,
+      "ler": 0.002,
+      "circuit_depth": 72,
+      "correct_count": 861
+    },
+    {
+      "file": "ibm_calibration_based_d3_20251227_234259.json",
+      "timestamp": "2025-12-27T23:42:59.755833",
+      "platform": "IBM Quantum",
+      "backend": "ibm_torino",
+      "hardware_type": "superconducting",
+      "is_real_hardware": true,
+      "selection_method": "calibration_based",
+      "code_distance": 3,
+      "shots": 1000,
+      "ler": 0.003,
+      "circuit_depth": 72,
+      "correct_count": 732
+    },
+    {
+      "file": "ibm_calibration_based_d5_20251227_234647.json",
+      "timestamp": "2025-12-27T23:46:47.526089",
+      "platform": "IBM Quantum",
+      "backend": "ibm_fez",
+      "hardware_type": "superconducting",
+      "is_real_hardware": true,
+      "selection_method": "calibration_based",
+      "code_distance": 5,
+      "shots": 1000,
+      "ler": 0.001,
+      "circuit_depth": 220,
+      "correct_count": 589
+    },
+    {
+      "file": "ibm_drift_aware_d3_20251227_233914.json",
+      "timestamp": "2025-12-27T23:39:14.567113",
+      "platform": "IBM Quantum",
+      "backend": "ibm_fez",
+      "hardware_type": "superconducting",
+      "is_real_hardware": true,
+      "selection_method": "drift_aware",
+      "code_distance": 3,
+      "shots": 1000,
+      "ler": 0.0,
+      "circuit_depth": 48,
+      "correct_count": 990
+    },
+    {
+      "file": "ibm_drift_aware_d3_20251227_234226.json",
+      "timestamp": "2025-12-27T23:42:26.430600",
+      "platform": "IBM Quantum",
+      "backend": "ibm_torino",
+      "hardware_type": "superconducting",
+      "is_real_hardware": true,
+      "selection_method": "drift_aware",
+      "code_distance": 3,
+      "shots": 1000,
+      "ler": 0.0,
+      "circuit_depth": 48,
+      "correct_count": 935
+    },
+    {
+      "file": "ibm_drift_aware_d5_20251227_234606.json",
+      "timestamp": "2025-12-27T23:46:06.031264",
+      "platform": "IBM Quantum",
+      "backend": "ibm_fez",
+      "hardware_type": "superconducting",
+      "is_real_hardware": true,
+      "selection_method": "drift_aware",
+      "code_distance": 5,
+      "shots": 1000,
+      "ler": 0.0,
+      "circuit_depth": 72,
+      "correct_count": 977
+    },
+    {
+      "file": "ionq_simulator_d3_20251227_234957.json",
+      "timestamp": "2025-12-27T23:49:57.923401",
+      "platform": "IonQ",
+      "backend": "ionq_simulator",
+      "hardware_type": "trapped-ion",
+      "is_real_hardware": false,
+      "noise_model": "ideal",
+      "selection_method": "N/A",
+      "code_distance": 3,
+      "shots": 100,
+      "ler": 0.0,
+      "circuit_depth": 13,
+      "correct_count": 100
+    },
+    {
+      "file": "ionq_simulator_d5_20251227_235159.json",
+      "timestamp": "2025-12-27T23:51:59.173891",
+      "platform": "IonQ",
+      "backend": "ionq_simulator",
+      "hardware_type": "trapped-ion",
+      "is_real_hardware": false,
+      "noise_model": "aria-1",
+      "selection_method": "N/A",
+      "code_distance": 5,
+      "shots": 100,
+      "ler": 0.0,
+      "circuit_depth": 25,
+      "correct_count": 100
+    },
+    {
+      "file": "ionq_simulator_d7_20251227_235222.json",
+      "timestamp": "2025-12-27T23:52:22.326676",
+      "platform": "IonQ",
+      "backend": "ionq_simulator",
+      "hardware_type": "trapped-ion",
+      "is_real_hardware": false,
+      "noise_model": "aria-1",
+      "selection_method": "N/A",
+      "code_distance": 7,
+      "shots": 200,
+      "ler": 0.0,
+      "circuit_depth": 61,
+      "correct_count": 200
+    }
+  ]
+}

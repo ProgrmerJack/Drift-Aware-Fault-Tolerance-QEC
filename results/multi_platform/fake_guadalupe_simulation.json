@@ -1,0 +1,25 @@
+{
+  "backend": "FakeGuadalupeV2",
+  "backend_type": "simulator",
+  "timestamp": "2025-12-27T23:23:54.464613",
+  "config": {
+    "code_distance": 3,
+    "n_rounds": 3,
+    "shots": 1000,
+    "n_data_qubits": 5,
+    "n_ancilla_qubits": 4
+  },
+  "circuit_info": {
+    "num_qubits": 9,
+    "original_depth": 30,
+    "transpiled_depth": 30
+  },
+  "results": {
+    "ler": 0.0,
+    "logical_errors": 0,
+    "total_shots": 1000
+  },
+  "counts": {
+    "00000": 1000
+  }
+}

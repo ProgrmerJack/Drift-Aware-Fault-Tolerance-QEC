@@ -1,9 +1,9 @@
 {
-  "deposit_id": 17881116,
-  "bucket_url": "https://zenodo.org/api/files/fa7f7f95-f378-45db-a17d-dee1ac56b5b4",
-  "prereserved_doi": "10.5281/zenodo.17881116",
-  "upload_timestamp": "2025-12-10T20:08:18.047674",
-  "files_uploaded": 20,
-  "files_failed": 0,
+  "deposit_id": 18069782,
+  "bucket_url": "https://zenodo.org/api/files/e577bc81-e8ce-4b4e-b01b-b668103434ae",
+  "prereserved_doi": "10.5281/zenodo.18069782",
+  "upload_timestamp": "2025-12-27T21:09:58.469267",
+  "files_uploaded": 9,
+  "files_failed": 11,
   "published": false
 }

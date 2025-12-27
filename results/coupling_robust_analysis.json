@@ -1,0 +1,42 @@
+{
+  "coupling_robust_analysis": {
+    "date": "2025-12-27",
+    "primary_metric": "absolute_delta_ler",
+    "n_pairs": 69,
+    "absolute_delta_analysis": {
+      "correlation": -0.7111,
+      "p_value": 7.55e-12,
+      "crossover_point": 0.11,
+      "model_r_squared": 0.5057,
+      "slope": -0.8771,
+      "intercept": 0.0965
+    },
+    "stratified_absolute_analysis": {
+      "low_stratum": {
+        "n": 35,
+        "mean_delta_ler": 0.013616,
+        "effect_direction": "DAQEC_WORSE"
+      },
+      "high_stratum": {
+        "n": 34,
+        "mean_delta_ler": -0.010017,
+        "effect_direction": "DAQEC_BETTER"
+      },
+      "strata_difference_p_value": 3.54e-09
+    },
+    "ancova_analysis": {
+      "daqec_ler_predicted_by_baseline": {
+        "slope": 0.1229,
+        "intercept": 0.0965,
+        "r_squared": 0.0197
+      },
+      "interpretation": "slope < 1 indicates DAQEC compresses differences, helping more at high noise"
+    },
+    "percent_improvement_reference": {
+      "correlation": 0.7071,
+      "p_value": 1.11e-11,
+      "warning": "Has mathematical coupling risk - use for reference only"
+    },
+    "robustness_verdict": "INTERACTION_SURVIVES"
+  }
+}

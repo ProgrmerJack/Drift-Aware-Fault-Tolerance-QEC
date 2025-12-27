@@ -1,0 +1,39 @@
+{
+  "platform": "IBM_Quantum",
+  "backend_name": "ibm_fez",
+  "selection_method": "calibration_based",
+  "code_distance": 3,
+  "n_rounds": 3,
+  "shots": 1000,
+  "logical_error_rate": 0.002,
+  "raw_counts": {
+    "00000": 861,
+    "00010": 23,
+    "01000": 39,
+    "00100": 10,
+    "11000": 10,
+    "10000": 41,
+    "01010": 1,
+    "01100": 6,
+    "10100": 1,
+    "00110": 3,
+    "10010": 1,
+    "00001": 2,
+    "11100": 2
+  },
+  "selected_qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "timestamp": "2025-12-27T23:39:50.726915",
+  "execution_time_s": 5.940922021865845,
+  "job_id": "d582fs9smlfc739j6kn0",
+  "circuit_depth": 72
+}

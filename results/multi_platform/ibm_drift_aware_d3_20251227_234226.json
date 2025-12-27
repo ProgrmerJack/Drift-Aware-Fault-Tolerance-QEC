@@ -1,0 +1,33 @@
+{
+  "platform": "IBM_Quantum",
+  "backend_name": "ibm_torino",
+  "selection_method": "drift_aware",
+  "code_distance": 3,
+  "n_rounds": 3,
+  "shots": 1000,
+  "logical_error_rate": 0.0,
+  "raw_counts": {
+    "00000": 935,
+    "10000": 3,
+    "00010": 26,
+    "00001": 23,
+    "00100": 1,
+    "01000": 9,
+    "00011": 3
+  },
+  "selected_qubits": [
+    5,
+    7,
+    9,
+    11,
+    18,
+    6,
+    8,
+    10,
+    12
+  ],
+  "timestamp": "2025-12-27T23:42:26.430600",
+  "execution_time_s": 5.957148313522339,
+  "job_id": "d582h39smlfc739j6lr0",
+  "circuit_depth": 48
+}

@@ -1,0 +1,6 @@
+{
+  "error": "An error occurred (AccessDeniedException) when calling the CreateQuantumTask operation: User agreement has not been accepted for 108547997871. Please visit https://us-east-1.console.aws.amazon.com/braket/home?region=us-east-1#/permissions?tab=general to accept the user agreement.",
+  "device": "IonQ Forte-1",
+  "platform": "amazon_braket",
+  "timestamp": "2025-12-28T00:11:14.918331"
+}

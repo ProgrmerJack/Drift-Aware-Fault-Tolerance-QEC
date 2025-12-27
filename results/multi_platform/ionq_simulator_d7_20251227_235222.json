@@ -1,0 +1,16 @@
+{
+  "backend": "ionq_simulator",
+  "platform": "ionq_direct",
+  "noise_model": "aria-1",
+  "n_data_qubits": 7,
+  "n_rounds": 5,
+  "shots": 200,
+  "circuit_depth": 61,
+  "counts": {
+    "0000000": 200
+  },
+  "ler": 0.0,
+  "correct_count": 200,
+  "job_id": "019b6127-6e39-7622-b7c3-b5e0b7f5a323",
+  "timestamp": "2025-12-27T23:52:22.326676"
+}

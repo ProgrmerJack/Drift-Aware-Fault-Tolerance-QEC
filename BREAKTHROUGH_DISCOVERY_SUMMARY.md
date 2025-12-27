@@ -14,7 +14,7 @@ Through ambitious deep dive analysis of adequately powered experimental data (N=
 - **Low noise (stable hardware)**: DAQEC causes **14.3% degradation** (p<0.0001)
 - **High noise (unstable hardware)**: DAQEC provides **8.3% benefit** (p=0.0001)
 - **Interaction strength**: r=0.711 between baseline error rate and DAQEC benefit (p<0.0001)
-- **Cross-validation**: Pattern replicates in independent N=48 dataset
+- **Cross-validation**: Pattern replicates in independent N=15 dataset (from 48 total jobs)
 - **Meta-analytic p-value**: p=0.000092 (highly significant)
 
 ---
@@ -32,7 +32,7 @@ Overall N=69 Effect: -1.83% (not significant, p=0.383)
 Interaction Correlation: r=0.711, p<0.0001 ***
 ```
 
-**Cross-Validation (N=48)**:
+**Cross-Validation (N=15 pairs from 48 jobs)**:
 ```
 Low Error:  +0.53% (not significant, p=0.891)
 High Error: +4.20% (marginal, p=0.071)
@@ -72,7 +72,7 @@ This confirms that DAQEC's adaptive selection adds measurable computational over
 
 **Major Change Point Detected**:
 ```
-N=48 to N=69 transition (20.8 minute gap):
+N=15 to N=69 transition (20.8 minute gap):
 ├─ Baseline LER jump: +29.1% (p<0.0001) ***
 ├─ DAQEC LER jump:    +34.7% (p<0.0001) ***
 └─ Effect direction reversal: +2.4% → -1.8%
@@ -118,7 +118,7 @@ Hardware noise level changed between batches, driving the reversal.
 ### Robustness Checks
 ✅ **Bootstrap CI**: Confirmed significance (10,000 iterations)  
 ✅ **Permutation test**: p<0.0001 for stratified effects  
-✅ **Cross-validation**: Independent N=48 replication  
+✅ **Cross-validation**: Independent N=15 replication  
 ✅ **Meta-analysis**: Combined p=0.000092  
 ✅ **Mechanistic model**: R²=0.50, interpretable parameters
 
@@ -164,7 +164,7 @@ Hardware noise level changed between batches, driving the reversal.
 **Figures** (4-5 main + extended data):
 1. Interaction scatter plot + stratified comparison
 2. Mechanistic model + crossover analysis
-3. Cross-validation across N=48 and N=69
+3. Cross-validation across N=15 and N=69
 4. Circuit overhead correlation
 5. (Extended) Temporal analysis + hardware state changes
 
@@ -185,7 +185,7 @@ Hardware noise level changed between batches, driving the reversal.
 - `mechanistic_model.png` - Mechanistic analysis
 
 ### Data
-- `collected_results_20251222_122049.json` - N=48 dataset
+- `collected_results_20251222_122049.json` - 48 jobs dataset (15 deployment pairs)
 - `collected_results_20251222_124949.json` - N=69 dataset
 
 ---

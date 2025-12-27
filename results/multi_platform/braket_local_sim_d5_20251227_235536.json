@@ -1,0 +1,16 @@
+{
+  "backend": "LocalSimulator",
+  "platform": "amazon_braket",
+  "device_arn": null,
+  "n_data_qubits": 5,
+  "n_rounds": 3,
+  "shots": 100,
+  "circuit_depth": 13,
+  "counts": {
+    "00000": 100
+  },
+  "ler": 0.0,
+  "correct_count": 100,
+  "task_id": "f0947ebd-e2e8-4c6e-bd6f-d0058f053b0c",
+  "timestamp": "2025-12-27T23:55:36.362553"
+}

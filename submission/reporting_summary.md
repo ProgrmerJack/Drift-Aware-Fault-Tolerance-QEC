@@ -90,11 +90,11 @@ All reported effects include:
 
 ### 9. Data availability statement
 
-All data are deposited at Zenodo (DOI: 10.5281/zenodo.17881116) under CC BY 4.0 license. See Data Availability section in manuscript. The deposit includes: master.parquet (756 experiments, 126 paired sessions), IBM Fez hardware validation results, syndrome statistics, drift characterization, effect sizes by condition, and SourceData.xlsx with all figure/table data.
+All data are deposited at Zenodo (DOI: 10.5281/zenodo.18045661) under CC BY 4.0 license. See Data Availability section in manuscript. The deposit includes: master.parquet (756 experiments, 126 paired sessions), IBM Fez hardware validation results, syndrome statistics, drift characterization, effect sizes by condition, and SourceData.xlsx with all figure/table data.
 
 ### 10. Unique identifiers
 
-- **Zenodo DOI**: 10.5281/zenodo.17881116
+- **Zenodo DOI**: 10.5281/zenodo.18045661
 - **Repository URL**: https://github.com/ProgrmerJack/Drift-Aware-Fault-Tolerance-QEC
 
 ---
@@ -103,7 +103,7 @@ All data are deposited at Zenodo (DOI: 10.5281/zenodo.17881116) under CC BY 4.0 
 
 ### 11. Code availability statement
 
-All code is available at https://github.com/ProgrmerJack/Drift-Aware-Fault-Tolerance-QEC under MIT license and archived at Zenodo (DOI: 10.5281/zenodo.17881116). See Code Availability section in manuscript. The repository includes drop-in API functions (select_qubits_drift_aware, recommend_probe_interval, decode_adaptive) enabling immediate adoption.
+All code is available at https://github.com/ProgrmerJack/Drift-Aware-Fault-Tolerance-QEC under MIT license and archived at Zenodo (DOI: 10.5281/zenodo.18045661). See Code Availability section in manuscript. The repository includes drop-in API functions (select_qubits_drift_aware, recommend_probe_interval, decode_adaptive) enabling immediate adoption.
 
 ### 12. Custom algorithms
 

@@ -1,0 +1,24 @@
+{
+  "device": "LocalSimulator",
+  "device_key": null,
+  "device_type": "simulator",
+  "platform": "amazon_braket",
+  "device_arn": null,
+  "n_data_qubits": 3,
+  "n_ancilla_qubits": 2,
+  "total_qubits": 5,
+  "n_rounds": 1,
+  "shots": 100,
+  "circuit_depth": 5,
+  "counts": {
+    "00000": 100
+  },
+  "raw_ler": 0.0,
+  "correctable_ler": 0.0,
+  "correct_count": 100,
+  "correctable_count": 100,
+  "task_id": "4b5d4a5a-1de3-489d-a955-3e5795012720",
+  "elapsed_seconds": 0.012097597122192383,
+  "estimated_cost_usd": 0.0,
+  "timestamp": "2025-12-28T00:10:28.706710"
+}

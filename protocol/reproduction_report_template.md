@@ -42,8 +42,8 @@ Signature: _______________________
 
 ```bash
 # Record the exact commands used
-git clone https://github.com/[repo]
-cd [repo]
+git clone https://github.com/ProgrmerJack/Drift-Aware-Fault-Tolerance-QEC
+cd Drift-Aware-Fault-Tolerance-QEC
 git checkout [tag/commit]
 git log -1 --format="%H"  # Record full commit hash
 ```

@@ -115,7 +115,7 @@ def select_qubits_drift_aware(
         raise ValueError(f"code_distance must be 3, 5, or 7, got {code_distance}")
     
     n_data_qubits = 2 * code_distance - 1
-    n_ancilla_qubits = code_distance - 1
+    n_ancilla_qubits = n_data_qubits - 1  # Each ancilla checks adjacent pairs
     
     # Find all valid linear chains of required length
     candidate_chains = _find_linear_chains(
@@ -192,14 +192,20 @@ def _find_linear_chains(topology, length: int, valid_qubits: set) -> List[List[i
     valid_set = set(valid_qubits)
     
     # Get adjacency from topology
-    if hasattr(topology, 'edge_list'):
+    if hasattr(topology, 'get_edges'):
+        # Qiskit CouplingMap (new API)
+        edges = set()
+        for edge in topology.get_edges():
+            edges.add((edge[0], edge[1]))
+            edges.add((edge[1], edge[0]))
+    elif hasattr(topology, 'edge_list'):
         # rustworkx PyGraph
         edges = set()
         for edge in topology.edge_list():
             edges.add((edge[0], edge[1]))
             edges.add((edge[1], edge[0]))
     else:
-        # networkx Graph
+        # networkx Graph or similar with edges() method
         edges = set()
         for u, v in topology.edges():
             edges.add((u, v))

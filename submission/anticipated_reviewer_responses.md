@@ -18,7 +18,7 @@
    
    Neither relies on the other for significance.
 
-3. **Cross-validation confirms pattern:** The independent N=48 dataset shows the same directional pattern, with meta-analytic p=0.00009.
+3. **Cross-validation confirms pattern:** The independent N=15 dataset shows the same directional pattern, with meta-analytic p=0.00009.
 
 4. **Robustness checks all pass:**
    - Permutation test: p < 0.0001
@@ -67,7 +67,7 @@
 
 1. **Experimental design with randomization:** Each pair used randomized order (baseline-first or DAQEC-first), controlling for temporal confounds within sessions.
 
-2. **Hardware state transition as natural experiment:** The 29% jump in baseline LER between N=48 and N=69 periods—with corresponding effect reversal—provides quasi-experimental evidence. The *same* intervention produced *opposite* effects when hardware state changed.
+2. **Hardware state transition as natural experiment:** The 29% jump in baseline LER between N=15 and N=69 periods—with corresponding effect reversal—provides quasi-experimental evidence. The *same* intervention produced *opposite* effects when hardware state changed.
 
 3. **Mechanistic model with interpretable parameters:** The overhead model (15.4% fixed cost, 23.1% variable benefit) provides a causal mechanism with physically meaningful parameters.
 
@@ -85,7 +85,7 @@
 
 2. **Statistical power is already adequate:** The effect is highly significant (p < 10^-11) with comfortable margins. Additional data would narrow confidence intervals but not change conclusions.
 
-3. **Cross-validation provides independent confirmation:** Rather than simply doubling N=69, having an independent N=48 dataset under different conditions provides stronger evidence than N=138 under identical conditions would.
+3. **Cross-validation provides independent confirmation:** Rather than simply doubling N=69, having an independent N=15 dataset under different conditions provides stronger evidence than N=138 under identical conditions would.
 
 4. **The discovery stands on multiple legs:** Significant strata effects, strong correlation, meta-analytic confirmation, mechanistic model, robustness checks—redundancy provides confidence.
 
@@ -182,7 +182,7 @@
 | Metric | Value | 
 |--------|-------|
 | Primary dataset | N=69 paired experiments |
-| Validation dataset | N=48 paired experiments |
+| Validation dataset | N=15 paired experiments |
 | Interaction correlation | r=0.711, p<10^-11 |
 | Low-noise effect | -14.3% (p<0.0001) |
 | High-noise effect | +8.3% (p=0.0001) |
