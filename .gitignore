@@ -2,6 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.github
+.codacy/
+si/
+zenodo_v2/
 
 # C extensions
 *.so
@@ -142,11 +146,6 @@ Desktop.ini
 # Log files
 *.log
 logs/
-
-# Large result files
-results/*.parquet
-results/*.csv
-!results/.gitkeep
 
 # Archive folder (working notes and debug scripts)
 archive/

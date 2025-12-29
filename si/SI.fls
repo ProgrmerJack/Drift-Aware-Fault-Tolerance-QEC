@@ -418,9 +418,6 @@ INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmb8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmr8t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/zptmcm7m.vf
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
 INPUT SI.aux
 INPUT ./SI.out
 INPUT ./SI.out
