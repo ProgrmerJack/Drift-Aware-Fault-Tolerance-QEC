@@ -181,11 +181,12 @@ print(f"Remaining budget: {tracker.remaining_budget()}s")
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{drift_aware_qec_2024,
+@article{drift_aware_qec_2025,
   title={Drift-Aware Fault-Tolerant Quantum Error Correction},
-  author={Your Name},
+  author={Ashuraliyev, Abduxoliq},
   journal={arXiv preprint},
-  year={2024}
+  year={2025},
+  note={ORCID: 0009-0003-5482-5526}
 }
 ```
 
@@ -193,8 +194,14 @@ If you use this code in your research, please cite:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Author
+
+**Abduxoliq Ashuraliyev**  
+Email: Jack00040008@outlook.com  
+ORCID: [0009-0003-5482-5526](https://orcid.org/0009-0003-5482-5526)
+
 ## Acknowledgments
 
 - IBM Quantum for providing access to quantum hardware
+- Amazon Braket, IQM Cloud, and Rigetti for multi-platform validation access
 - Qiskit development team for the quantum computing framework
-- [Your institution/funding sources]

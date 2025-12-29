@@ -230,14 +230,15 @@ If you use this data, please cite:
 
 ```bibtex
 @dataset{daqec_cross_validation_2025,
-  author       = {[Author Name]},
+  author       = {Ashuraliyev, Abduxoliq},
   title        = {{Multi-Platform Cross-Validation of Drift-Aware 
                    Quantum Error Correction}},
   year         = 2025,
   publisher    = {Zenodo},
   version      = {2.0},
   doi          = {10.5281/zenodo.18045661},
-  url          = {https://doi.org/10.5281/zenodo.18045661}
+  url          = {https://doi.org/10.5281/zenodo.18045661},
+  note         = {Email: Jack00040008@outlook.com, ORCID: 0009-0003-5482-5526}
 }
 ```
 

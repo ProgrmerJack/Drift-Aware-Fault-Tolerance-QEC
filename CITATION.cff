@@ -9,12 +9,14 @@ abstract: >-
   adaptive qubit selection, and statistical analysis tools for 
   drift-error correlation studies.
 authors:
-  - family-names: "Author"
-    given-names: "Mark"
+  - family-names: "Ashuraliyev"
+    given-names: "Abduxoliq"
+    email: "Jack00040008@outlook.com"
+    orcid: "https://orcid.org/0009-0003-5482-5526"
 version: "0.1.0"
 date-released: 2025-01-01
 license: MIT
-repository-code: "https://github.com/username/Drift-Aware-Fault-Tolerance-QEC"
+repository-code: "https://github.com/ProgrmerJack/Drift-Aware-Fault-Tolerance-QEC"
 keywords:
   - quantum computing
   - quantum error correction

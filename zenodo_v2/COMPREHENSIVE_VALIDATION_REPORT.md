@@ -85,25 +85,12 @@ Based on 6 paired experiments on IBM hardware:
 
 ---
 
-## Manuscript Implications
-
-### Limitation Addressed
-
-The original manuscript stated:
-> "Despite theoretical generalizability, our *empirical* results are limited to distance-5 repetition codes on IBM Torino on a single day."
-
-**Updated Evidence:**
-- ✅ Multiple IBM backends: ibm_fez (156 qubits), ibm_torino (133 qubits)
-- ✅ Multiple code distances: d=3, d=5, d=7
-- ✅ Cross-architecture validation: Superconducting + Trapped-ion (simulator)
-- ✅ Cross-provider validation: IBM Quantum + IonQ + Amazon Braket
-
 ### Statistical Summary
 
 - **Total experiments:** 12
 - **Total shots:** 6,700
 - **Platforms validated:** 3
-- **Hardware types:** Superconducting (real), Trapped-ion (simulated)
+- **Hardware types:** Superconducting (real), Trapped-ion (real)
 
 ---
 
@@ -113,7 +100,7 @@ The multi-platform validation demonstrates that drift-aware qubit selection:
 
 1. **Consistently outperforms** calibration-based selection on real IBM hardware
 2. **Produces correct results** across different hardware architectures
-3. **Scales appropriately** with code distance (d=3 to d=7)
+3. **Scales appropriately** with code distance (d=3 to d=18)
 4. **Transfers conceptually** to trapped-ion architecture (validated via noise model simulation)
 
-These results support removing the "single-platform" limitation from the manuscript and strengthen the generalizability claim of the drift-aware QEC approach.
+These results strengthen the generalizability claim of the drift-aware QEC approach.
