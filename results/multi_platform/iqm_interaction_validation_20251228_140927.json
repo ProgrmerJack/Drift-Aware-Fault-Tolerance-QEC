@@ -1,0 +1,126 @@
+{
+  "experiment_type": "interaction_effect_validation",
+  "device": "LocalSimulator",
+  "device_type": "superconducting",
+  "conditions": [
+    {
+      "n_data": 3,
+      "n_rounds": 1,
+      "complexity": "LOW",
+      "experiments": [
+        {
+          "method": "drift_aware",
+          "n_data_qubits": 3,
+          "n_rounds": 1,
+          "shots": 10,
+          "qubit_chain": [
+            9,
+            4,
+            5,
+            10,
+            11
+          ],
+          "circuit_depth": 5,
+          "correct_count": 10,
+          "total_shots": 10,
+          "ler": 0.0,
+          "elapsed_seconds": 0.026093006134033203,
+          "task_id": "cb1bb3bc-2bfc-4ea3-9c5c-de6cbe8b66d1"
+        },
+        {
+          "method": "calibration_based",
+          "n_data_qubits": 3,
+          "n_rounds": 1,
+          "shots": 10,
+          "qubit_chain": [
+            17,
+            12,
+            7,
+            6,
+            5
+          ],
+          "circuit_depth": 11,
+          "correct_count": 10,
+          "total_shots": 10,
+          "ler": 0.0,
+          "elapsed_seconds": 0.0066950321197509766,
+          "task_id": "f465d9f9-8e26-42ef-8b79-2bd6f509069f"
+        }
+      ],
+      "comparison": {
+        "ler_difference": 0.0,
+        "drift_aware_helps": false,
+        "drift_aware_ler": 0.0,
+        "calibration_ler": 0.0
+      }
+    },
+    {
+      "n_data": 5,
+      "n_rounds": 2,
+      "complexity": "MEDIUM",
+      "experiments": [
+        {
+          "method": "drift_aware",
+          "n_data_qubits": 5,
+          "n_rounds": 2,
+          "shots": 10,
+          "qubit_chain": [
+            9,
+            4,
+            5,
+            10,
+            11,
+            6,
+            7,
+            12,
+            17
+          ],
+          "circuit_depth": 11,
+          "correct_count": 10,
+          "total_shots": 10,
+          "ler": 0.0,
+          "elapsed_seconds": 0.0070819854736328125,
+          "task_id": "a9aab899-f900-4f10-8bfe-18e0f4bf0122"
+        },
+        {
+          "method": "calibration_based",
+          "n_data_qubits": 5,
+          "n_rounds": 2,
+          "shots": 10,
+          "qubit_chain": [
+            17,
+            12,
+            7,
+            6,
+            5,
+            2,
+            1,
+            4,
+            3
+          ],
+          "circuit_depth": 15,
+          "correct_count": 10,
+          "total_shots": 10,
+          "ler": 0.0,
+          "elapsed_seconds": 0.006710052490234375,
+          "task_id": "a7319498-9ea9-4dd4-9523-128138df81e0"
+        }
+      ],
+      "comparison": {
+        "ler_difference": 0.0,
+        "drift_aware_helps": false,
+        "drift_aware_ler": 0.0,
+        "calibration_ler": 0.0
+      }
+    }
+  ],
+  "timestamp": "2025-12-28T14:09:27.632375",
+  "shots_per_condition": 10,
+  "analysis": {
+    "low_complexity_helps": 0,
+    "low_complexity_total": 1,
+    "high_complexity_helps": 0,
+    "high_complexity_total": 0,
+    "interaction_detected": false
+  }
+}

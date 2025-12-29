@@ -1,0 +1,1082 @@
+{
+  "version": "v2",
+  "timestamp": "20251229_173553",
+  "device": "IQM Emerald",
+  "shots_per_condition": 500,
+  "n_runs": 10,
+  "estimated_cost": 44.0,
+  "qubit_sets": {
+    "optimal": {
+      "data": [
+        25,
+        26,
+        27
+      ],
+      "ancilla": [
+        30,
+        31
+      ]
+    },
+    "stale": {
+      "data": [
+        0,
+        1,
+        2
+      ],
+      "ancilla": [
+        7,
+        8
+      ]
+    },
+    "medium": {
+      "data": [
+        10,
+        11,
+        12
+      ],
+      "ancilla": [
+        17,
+        18
+      ]
+    }
+  },
+  "runs": [
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 473,
+          "00010": 11,
+          "01000": 6,
+          "00001": 5,
+          "00100": 3,
+          "00101": 1,
+          "01001": 1
+        },
+        "ler_raw": 0.05400000000000005,
+        "ler_corrected": 0.03600000000000003,
+        "elapsed": 11.533952236175537
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 472,
+          "10000": 2,
+          "00100": 7,
+          "00001": 6,
+          "01000": 7,
+          "00010": 5,
+          "11000": 1
+        },
+        "ler_raw": 0.05600000000000005,
+        "ler_corrected": 0.02400000000000002,
+        "elapsed": 7.718289136886597
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 484,
+          "00001": 7,
+          "00010": 3,
+          "01000": 3,
+          "00100": 2,
+          "10000": 1
+        },
+        "ler_raw": 0.03200000000000003,
+        "ler_corrected": 0.020000000000000018,
+        "elapsed": 7.155445098876953
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 481,
+          "01010": 1,
+          "00010": 6,
+          "00001": 7,
+          "00100": 1,
+          "10000": 1,
+          "01000": 3
+        },
+        "ler_raw": 0.038000000000000034,
+        "ler_corrected": 0.028000000000000025,
+        "elapsed": 6.536128044128418
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 483,
+          "01000": 7,
+          "00001": 2,
+          "00010": 7,
+          "00100": 1
+        },
+        "ler_raw": 0.03400000000000003,
+        "ler_corrected": 0.018000000000000016,
+        "elapsed": 5.863425970077515
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 485,
+          "01000": 7,
+          "00001": 3,
+          "00100": 3,
+          "00010": 1,
+          "10000": 1
+        },
+        "ler_raw": 0.030000000000000027,
+        "ler_corrected": 0.008000000000000007,
+        "elapsed": 7.300566673278809
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00001": 2,
+          "00000": 486,
+          "01000": 6,
+          "00010": 2,
+          "00100": 4
+        },
+        "ler_raw": 0.028000000000000025,
+        "ler_corrected": 0.008000000000000007,
+        "elapsed": 9.157150268554688
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 479,
+          "00010": 7,
+          "01000": 7,
+          "00001": 4,
+          "10000": 2,
+          "00100": 1
+        },
+        "ler_raw": 0.04200000000000004,
+        "ler_corrected": 0.02200000000000002,
+        "elapsed": 6.16497802734375
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 481,
+          "00100": 4,
+          "00010": 6,
+          "00001": 6,
+          "01000": 2,
+          "10000": 1
+        },
+        "ler_raw": 0.038000000000000034,
+        "ler_corrected": 0.02400000000000002,
+        "elapsed": 8.353715896606445
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 477,
+          "01000": 9,
+          "00010": 8,
+          "00100": 4,
+          "00001": 2
+        },
+        "ler_raw": 0.04600000000000004,
+        "ler_corrected": 0.020000000000000018,
+        "elapsed": 7.47602653503418
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 482,
+          "01000": 6,
+          "00001": 5,
+          "10000": 3,
+          "00100": 2,
+          "00010": 2
+        },
+        "ler_raw": 0.03600000000000003,
+        "ler_corrected": 0.014000000000000012,
+        "elapsed": 7.22462272644043
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 482,
+          "00010": 4,
+          "01000": 6,
+          "00001": 5,
+          "10000": 1,
+          "00100": 2
+        },
+        "ler_raw": 0.03600000000000003,
+        "ler_corrected": 0.018000000000000016,
+        "elapsed": 6.854819059371948
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 484,
+          "01000": 5,
+          "00100": 5,
+          "00010": 6
+        },
+        "ler_raw": 0.03200000000000003,
+        "ler_corrected": 0.01200000000000001,
+        "elapsed": 7.196420907974243
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 485,
+          "00100": 1,
+          "01000": 8,
+          "00001": 2,
+          "00010": 4
+        },
+        "ler_raw": 0.030000000000000027,
+        "ler_corrected": 0.01200000000000001,
+        "elapsed": 5.646130323410034
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 477,
+          "00010": 9,
+          "00001": 7,
+          "10000": 1,
+          "00011": 1,
+          "00100": 2,
+          "01000": 3
+        },
+        "ler_raw": 0.04600000000000004,
+        "ler_corrected": 0.03400000000000003,
+        "elapsed": 6.98954176902771
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 474,
+          "00100": 7,
+          "01000": 4,
+          "00010": 9,
+          "00001": 4,
+          "10000": 1,
+          "00011": 1
+        },
+        "ler_raw": 0.052000000000000046,
+        "ler_corrected": 0.028000000000000025,
+        "elapsed": 7.136669158935547
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "10000": 3,
+          "00000": 466,
+          "01000": 10,
+          "00010": 11,
+          "00001": 4,
+          "00100": 5,
+          "01100": 1
+        },
+        "ler_raw": 0.06799999999999995,
+        "ler_corrected": 0.03200000000000003,
+        "elapsed": 7.1761250495910645
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 475,
+          "00010": 11,
+          "00100": 3,
+          "00001": 4,
+          "10000": 2,
+          "01001": 1,
+          "01000": 4
+        },
+        "ler_raw": 0.050000000000000044,
+        "ler_corrected": 0.03200000000000003,
+        "elapsed": 9.056174039840698
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 486,
+          "01000": 6,
+          "00010": 2,
+          "00100": 1,
+          "10000": 3,
+          "00001": 2
+        },
+        "ler_raw": 0.028000000000000025,
+        "ler_corrected": 0.008000000000000007,
+        "elapsed": 7.4135048389434814
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 485,
+          "10000": 2,
+          "00100": 3,
+          "00010": 6,
+          "01000": 3,
+          "01001": 1
+        },
+        "ler_raw": 0.030000000000000027,
+        "ler_corrected": 0.014000000000000012,
+        "elapsed": 5.869630336761475
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 469,
+          "00001": 8,
+          "01000": 9,
+          "00100": 5,
+          "00010": 8,
+          "10000": 1
+        },
+        "ler_raw": 0.062000000000000055,
+        "ler_corrected": 0.03200000000000003,
+        "elapsed": 7.32428503036499
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 477,
+          "00010": 9,
+          "01000": 8,
+          "00100": 3,
+          "01010": 1,
+          "10000": 2
+        },
+        "ler_raw": 0.04600000000000004,
+        "ler_corrected": 0.020000000000000018,
+        "elapsed": 6.972953796386719
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 475,
+          "01000": 13,
+          "00010": 6,
+          "00001": 5,
+          "00100": 1
+        },
+        "ler_raw": 0.050000000000000044,
+        "ler_corrected": 0.02200000000000002,
+        "elapsed": 7.214643955230713
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 473,
+          "01000": 7,
+          "00001": 8,
+          "00010": 9,
+          "00100": 3
+        },
+        "ler_raw": 0.05400000000000005,
+        "ler_corrected": 0.03400000000000003,
+        "elapsed": 8.442416191101074
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 472,
+          "00010": 7,
+          "00100": 6,
+          "00001": 5,
+          "01000": 10
+        },
+        "ler_raw": 0.05600000000000005,
+        "ler_corrected": 0.02400000000000002,
+        "elapsed": 7.105829238891602
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 478,
+          "00010": 9,
+          "01000": 7,
+          "10000": 1,
+          "00001": 3,
+          "00100": 2
+        },
+        "ler_raw": 0.04400000000000004,
+        "ler_corrected": 0.02400000000000002,
+        "elapsed": 6.90848445892334
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 477,
+          "00010": 11,
+          "00001": 2,
+          "01000": 5,
+          "00100": 4,
+          "10000": 1
+        },
+        "ler_raw": 0.04600000000000004,
+        "ler_corrected": 0.026000000000000023,
+        "elapsed": 7.241984128952026
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00010": 8,
+          "00000": 473,
+          "00100": 5,
+          "00001": 8,
+          "01000": 5,
+          "01001": 1
+        },
+        "ler_raw": 0.05400000000000005,
+        "ler_corrected": 0.03400000000000003,
+        "elapsed": 8.606168746948242
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 473,
+          "00010": 6,
+          "01000": 9,
+          "10000": 4,
+          "00001": 4,
+          "00100": 4
+        },
+        "ler_raw": 0.05400000000000005,
+        "ler_corrected": 0.020000000000000018,
+        "elapsed": 7.069915771484375
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 474,
+          "00010": 9,
+          "00001": 5,
+          "00100": 4,
+          "01000": 6,
+          "00110": 1,
+          "10000": 1
+        },
+        "ler_raw": 0.052000000000000046,
+        "ler_corrected": 0.030000000000000027,
+        "elapsed": 6.975351333618164
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 478,
+          "00001": 5,
+          "11000": 1,
+          "00010": 3,
+          "10000": 3,
+          "01000": 7,
+          "00100": 3
+        },
+        "ler_raw": 0.04400000000000004,
+        "ler_corrected": 0.018000000000000016,
+        "elapsed": 7.015696287155151
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 478,
+          "10000": 2,
+          "01000": 4,
+          "00010": 8,
+          "00100": 4,
+          "00001": 3,
+          "01010": 1
+        },
+        "ler_raw": 0.04400000000000004,
+        "ler_corrected": 0.02400000000000002,
+        "elapsed": 6.999389886856079
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 473,
+          "00001": 5,
+          "01000": 8,
+          "00010": 8,
+          "00100": 5,
+          "10000": 1
+        },
+        "ler_raw": 0.05400000000000005,
+        "ler_corrected": 0.026000000000000023,
+        "elapsed": 5.473512411117554
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00001": 5,
+          "00000": 480,
+          "01000": 6,
+          "00100": 3,
+          "00010": 5,
+          "10000": 1
+        },
+        "ler_raw": 0.040000000000000036,
+        "ler_corrected": 0.020000000000000018,
+        "elapsed": 5.76675271987915
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 471,
+          "00010": 4,
+          "00001": 13,
+          "01000": 8,
+          "10000": 2,
+          "00100": 2
+        },
+        "ler_raw": 0.05800000000000005,
+        "ler_corrected": 0.03400000000000003,
+        "elapsed": 7.15830659866333
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 478,
+          "10000": 3,
+          "00100": 3,
+          "01000": 5,
+          "00010": 7,
+          "00001": 3,
+          "10001": 1
+        },
+        "ler_raw": 0.04400000000000004,
+        "ler_corrected": 0.02200000000000002,
+        "elapsed": 8.8135507106781
+      }
+    },
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware (optimal qubits, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 475,
+          "00100": 5,
+          "00010": 11,
+          "01000": 3,
+          "10000": 2,
+          "01001": 1,
+          "00001": 2,
+          "01010": 1
+        },
+        "ler_raw": 0.050000000000000044,
+        "ler_corrected": 0.030000000000000027,
+        "elapsed": 7.290982007980347
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration (optimal qubits, NO overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 466,
+          "00001": 9,
+          "01000": 7,
+          "00010": 10,
+          "00100": 4,
+          "10000": 3,
+          "01001": 1
+        },
+        "ler_raw": 0.06799999999999995,
+        "ler_corrected": 0.040000000000000036,
+        "elapsed": 7.2130255699157715
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware (adapted to optimal, WITH overhead)",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 500,
+        "depth": 5,
+        "counts": {
+          "00000": 475,
+          "00010": 8,
+          "00100": 6,
+          "10000": 2,
+          "00001": 4,
+          "01000": 5
+        },
+        "ler_raw": 0.050000000000000044,
+        "ler_corrected": 0.02400000000000002,
+        "elapsed": 5.7076921463012695
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration (stale qubits, NO overhead)",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 500,
+        "depth": 4,
+        "counts": {
+          "00000": 475,
+          "00010": 5,
+          "01000": 14,
+          "10000": 1,
+          "00100": 2,
+          "00011": 1,
+          "00110": 1,
+          "00001": 1
+        },
+        "ler_raw": 0.050000000000000044,
+        "ler_corrected": 0.016000000000000014,
+        "elapsed": 5.905447006225586
+      }
+    }
+  ],
+  "aggregate": {
+    "low_drift_ler": 0.050200000000000036,
+    "low_calib_ler": 0.04620000000000003,
+    "high_drift_ler": 0.04180000000000004,
+    "high_calib_ler": 0.04440000000000004,
+    "low_effect": 0.0040000000000000036,
+    "high_effect": -0.002599999999999998,
+    "interaction": -0.006600000000000002,
+    "verdict": "SUPPORTED"
+  }
+}

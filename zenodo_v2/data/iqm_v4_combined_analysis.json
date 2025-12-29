@@ -1,0 +1,14 @@
+{
+  "n_runs": 120,
+  "mean_interaction": -0.0012166666666666678,
+  "std_interaction": 0.01652532568177975,
+  "cohens_d": -0.07362436844486049,
+  "t_statistic": -0.8031470399868531,
+  "p_value_one_tailed": 0.21174550771847533,
+  "ci_95": [
+    -0.004216268727526837,
+    0.0017829353941935017
+  ],
+  "direction_negative": 0.5,
+  "claims_supported": 2
+}

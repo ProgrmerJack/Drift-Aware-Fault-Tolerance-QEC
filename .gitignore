@@ -148,6 +148,13 @@ results/*.parquet
 results/*.csv
 !results/.gitkeep
 
+# Archive folder (working notes and debug scripts)
+archive/
+
+# Cache folders
+.codacy/
+.mypy_cache/
+.ruff_cache/
 
 #Ignore vscode AI rules
 .github\instructions\codacy.instructions.md

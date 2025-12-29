@@ -1,0 +1,34 @@
+{
+  "validation_type": "IQM Emerald Hardware Validation",
+  "claim": "Drift-aware QEC interaction effect is negative",
+  "n_runs": 80,
+  "data_files": [
+    "iqm_validation_v4_20251229_181509.json",
+    "iqm_validation_v4_20251229_182837.json",
+    "iqm_validation_v4_20251229_185111.json"
+  ],
+  "statistics": {
+    "mean_interaction": -0.003,
+    "std": 0.0161,
+    "sem": 0.0018,
+    "ci_95_low": -0.0066,
+    "ci_95_high": 0.0005,
+    "t_statistic": -1.679,
+    "p_value_one_tailed": 0.0485,
+    "cohens_d": -0.188,
+    "pct_negative": 56.2,
+    "n_negative": 45
+  },
+  "bootstrap": {
+    "n_resamples": 10000,
+    "p_mean_negative": 0.954,
+    "ci_95_low": -0.0065,
+    "ci_95_high": 0.0005
+  },
+  "verification": {
+    "significant": true,
+    "direction_correct": true,
+    "claim_supported": true
+  },
+  "timestamp": "2025-12-29T19:49:18.539843"
+}

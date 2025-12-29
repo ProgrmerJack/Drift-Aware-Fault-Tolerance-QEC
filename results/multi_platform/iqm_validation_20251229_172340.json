@@ -1,0 +1,106 @@
+{
+  "timestamp": "20251229_172340",
+  "device": "IQM Emerald",
+  "shots_per_condition": 10,
+  "n_runs": 1,
+  "estimated_cost": 1.264,
+  "runs": [
+    {
+      "low_drift": {
+        "condition": "LOW + Drift-aware",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 10,
+        "circuit_depth": 5,
+        "counts": {
+          "00000": 10
+        },
+        "ler_raw": 0.0,
+        "ler_corrected": 0.0,
+        "elapsed_seconds": 11.090949773788452,
+        "task_arn": "arn:aws:braket:eu-north-1:108547997871:quantum-task/8cfacad6-fd7d-497b-bf30-e2e72dff0306"
+      },
+      "low_calib": {
+        "condition": "LOW + Calibration",
+        "data_qubits": [
+          25,
+          26,
+          27
+        ],
+        "ancilla_qubits": [
+          30,
+          31
+        ],
+        "shots": 10,
+        "circuit_depth": 7,
+        "counts": {
+          "00000": 9,
+          "00010": 1
+        },
+        "ler_raw": 0.09999999999999998,
+        "ler_corrected": 0.09999999999999998,
+        "elapsed_seconds": 6.647272109985352,
+        "task_arn": "arn:aws:braket:eu-north-1:108547997871:quantum-task/33886135-d6e5-4018-9a95-344c17df8a26"
+      },
+      "high_drift": {
+        "condition": "HIGH + Drift-aware",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 10,
+        "circuit_depth": 5,
+        "counts": {
+          "00000": 10
+        },
+        "ler_raw": 0.0,
+        "ler_corrected": 0.0,
+        "elapsed_seconds": 7.741935968399048,
+        "task_arn": "arn:aws:braket:eu-north-1:108547997871:quantum-task/d9218437-f57c-4450-a146-4de5b03ab967"
+      },
+      "high_calib": {
+        "condition": "HIGH + Calibration",
+        "data_qubits": [
+          0,
+          1,
+          2
+        ],
+        "ancilla_qubits": [
+          7,
+          8
+        ],
+        "shots": 10,
+        "circuit_depth": 7,
+        "counts": {
+          "00000": 9,
+          "00010": 1
+        },
+        "ler_raw": 0.09999999999999998,
+        "ler_corrected": 0.09999999999999998,
+        "elapsed_seconds": 7.272174119949341,
+        "task_arn": "arn:aws:braket:eu-north-1:108547997871:quantum-task/76c4d90e-5b01-4cba-ab63-7fcab399c5fc"
+      }
+    }
+  ],
+  "aggregate": {
+    "low_drift_ler": 0.0,
+    "low_calib_ler": 0.09999999999999998,
+    "high_drift_ler": 0.0,
+    "high_calib_ler": 0.09999999999999998,
+    "low_effect": -0.09999999999999998,
+    "high_effect": -0.09999999999999998,
+    "interaction": 0.0
+  }
+}

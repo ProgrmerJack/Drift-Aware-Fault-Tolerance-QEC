@@ -1,0 +1,13 @@
+{
+  "analysis_timestamp": "2025-12-29T19:52:22.893495",
+  "manuscript_claim": "Drift-aware QEC shows negative interaction effect (helps at HIGH noise, hurts at LOW noise)",
+  "primary_validation": {
+    "platform": "IQM Emerald",
+    "result": {
+      "platform": "IQM Emerald (Amazon Braket)",
+      "region": "eu-north-1 (Stockholm)",
+      "n_runs": 80,
+      "mean_interaction": -0.003,
+      "p_value": 0.0485,
+      "cohens_d": -0.188,
+      "significant": 

@@ -48,7 +48,7 @@ sys.path.insert(0, str(project_root))
 # Device ARNs and pricing
 DEVICES = {
     "ionq": {
-        "arn": "arn:aws:braket:us-east-1::device/qpu/ionq/Forte-1",
+        "arn": "arn:aws:braket:us-east-1::device/qpu/ionq/Forte-Enterprise-1",
         "name": "IonQ Forte-1",
         "type": "trapped-ion",
         "qubits": 36,

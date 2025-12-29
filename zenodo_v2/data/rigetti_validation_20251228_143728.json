@@ -1,0 +1,16 @@
+{
+  "single_test": {
+    "description": "drift_aware d=3 r=1",
+    "circuit_depth": 5,
+    "shots": 10,
+    "correct_count": 9,
+    "total_shots": 10,
+    "ler": 0.09999999999999998,
+    "elapsed_seconds": 10.69149374961853,
+    "task_id": "arn:aws:braket:us-west-1:108547997871:quantum-task/e54c4f97-cb1c-40b2-a756-836415e7acd2",
+    "counts": {
+      "00000": 9,
+      "00010": 1
+    }
+  }
+}

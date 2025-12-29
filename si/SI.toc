@@ -72,3 +72,19 @@
 \contentsline {subsection}{\numberline {15.3}Negative Controls: Placebo and Shuffled Tests}{25}{subsection.15.3}%
 \contentsline {subsection}{\numberline {15.4}Strongest-Possible-Bias Scenario}{25}{subsection.15.4}%
 \contentsline {subsection}{\numberline {15.5}Implications for Platform Transferability}{26}{subsection.15.5}%
+\contentsline {section}{\numberline {16}SI-14: Extended Generalizability Analysis}{26}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Limitation 1: Single Code Family (Distance-5 Repetition Codes)}{26}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Limitation 2: Single Platform (IBM Quantum)}{27}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Limitation 3: Single Day of Data Collection}{27}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}Limitation 4: Threshold Derived from Same Dataset}{28}{subsection.16.4}%
+\contentsline {subsection}{\numberline {16.5}Limitation 5: Probe Circuits Don't Capture Coherent Errors or Leakage}{28}{subsection.16.5}%
+\contentsline {subsection}{\numberline {16.6}Summary: Limitations Registry}{28}{subsection.16.6}%
+\contentsline {section}{\numberline {17}SI-15: Quantum Computing Hardware Task Identifiers}{29}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Amazon Braket Task Identifiers}{29}{subsection.17.1}%
+\contentsline {subsubsection}{\numberline {17.1.1}IQM Emerald (Primary Validation Platform)}{29}{subsubsection.17.1.1}%
+\contentsline {subsubsection}{\numberline {17.1.2}IonQ Forte-1 (Trapped-Ion Validation)}{29}{subsubsection.17.1.2}%
+\contentsline {subsubsection}{\numberline {17.1.3}Rigetti Ankaa-3 (Multi-Platform Superconducting)}{30}{subsubsection.17.1.3}%
+\contentsline {subsection}{\numberline {17.2}IBM Quantum Job Identifiers}{30}{subsection.17.2}%
+\contentsline {subsubsection}{\numberline {17.2.1}Primary Hardware Validation (N=186 jobs)}{30}{subsubsection.17.2.1}%
+\contentsline {subsection}{\numberline {17.3}Summary Statistics}{31}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}Data Availability Statement}{31}{subsection.17.4}%

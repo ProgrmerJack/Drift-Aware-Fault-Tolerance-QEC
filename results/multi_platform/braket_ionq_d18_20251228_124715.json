@@ -1,0 +1,24 @@
+{
+  "device": "IonQ Forte-1",
+  "device_key": "ionq",
+  "device_type": "trapped-ion",
+  "platform": "amazon_braket",
+  "device_arn": "arn:aws:braket:us-east-1::device/qpu/ionq/Forte-Enterprise-1",
+  "n_data_qubits": 18,
+  "n_ancilla_qubits": 17,
+  "total_qubits": 35,
+  "n_rounds": 1,
+  "shots": 500,
+  "circuit_depth": 35,
+  "counts": {
+    "00000000000000000000000000000000000": 500
+  },
+  "raw_ler": 0.0,
+  "correctable_ler": 0.0,
+  "correct_count": 500,
+  "correctable_count": 500,
+  "task_id": "arn:aws:braket:us-east-1:108547997871:quantum-task/75dcfc9a-f241-47d1-81bf-7e9879647dd8",
+  "elapsed_seconds": 589.3656640052795,
+  "estimated_cost_usd": 5.3,
+  "timestamp": "2025-12-28T12:47:15.885322"
+}
