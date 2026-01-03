@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1767026881.5135 "c:/Users/Jack0/GitHub/Drift-Aware-Fault-Tolerance-QEC/si/SI.tex" "SI.pdf" "SI" 1767026883.30029 0
-  "SI.aux" 1767026883 28002 9a738596a97b6be04bf5e43100153b1f "pdflatex"
-  "SI.out" 1767026883 20054 57e02556c25f9e6f50a66246d8e1bf1c "pdflatex"
-  "SI.tex" 1767026878 53248 fcfeac6ded6a65622ff83806fffafede ""
-  "SI.toc" 1767026883 8886 8a28f16eb1b508200a39fa83e541c0c2 "pdflatex"
-  "c:/Users/Jack0/GitHub/Drift-Aware-Fault-Tolerance-QEC/si/SI.tex" 1767026878 53248 fcfeac6ded6a65622ff83806fffafede ""
+["pdflatex"] 1767028616.5788 "c:/Users/Jack0/GitHub/Drift-Aware-Fault-Tolerance-QEC/si/SI.tex" "SI.pdf" "SI" 1767028618.5484 0
+  "SI.aux" 1767028618 28002 9a738596a97b6be04bf5e43100153b1f "pdflatex"
+  "SI.out" 1767028618 20054 57e02556c25f9e6f50a66246d8e1bf1c "pdflatex"
+  "SI.tex" 1767028614 53323 46a013305d702b1c15ce5b46f1fb2d12 ""
+  "SI.toc" 1767028618 8886 8a28f16eb1b508200a39fa83e541c0c2 "pdflatex"
+  "c:/Users/Jack0/GitHub/Drift-Aware-Fault-Tolerance-QEC/si/SI.tex" 1767028614 53323 46a013305d702b1c15ce5b46f1fb2d12 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1765688866 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1765688724 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1765688989 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -142,7 +142,7 @@
   "figures/si_fig9_specification_curve.pdf" 1766309259 22041 457d2d4ed537e8815e56d8281aa18d5b ""
   "generic_drift_table.tex" 1764955492 930 aab25506a85803c5e3df512b712e3679 ""
   "jit_comparison_table.tex" 1764952880 874 2fa8f2eb721868109eefa0f7d288c9de ""
-  "quantum_task_ids_table.tex" 1767020524 7053 ef73ad7d98a667bae9f7811fd643c088 ""
+  "quantum_task_ids_table.tex" 1767028083 7053 ef73ad7d98a667bae9f7811fd643c088 ""
   "strata_analysis_results.tex" 1766851366 3793 5dd665dc85e751e1f97104006bc4e857 ""
   "tail_risk_table.tex" 1764953448 1150 a6238b72145df1e798787656bdd3b048 ""
   (generated)

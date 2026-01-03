@@ -156,4 +156,8 @@ archive/
 .ruff_cache/
 
 #Ignore vscode AI rules
-.github\instructions\codacy.instructions.md
+.github/
+.codacy/
+si/
+submission/
+zenodo_v2/
